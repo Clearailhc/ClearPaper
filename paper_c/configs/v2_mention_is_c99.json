@@ -1,0 +1,23 @@
+{
+ "_doc": "v2 (research_log #132): InspecSafe mention channel with c_j = 0.99 for every fact (fact supervision: unmentioned = absent); eps / delta / min_pos as mention_freq.json",
+ "c": {
+  "open_flame": 0.99,
+  "smoke": 0.99,
+  "personnel_collapse": 0.99,
+  "smoking": 0.99,
+  "oil_leakage": 0.99,
+  "no_hard_hat": 0.99,
+  "no_gloves": 0.99,
+  "no_mask": 0.99,
+  "mobile_phone": 0.99,
+  "water_pooling": 0.99,
+  "oil_accumulation": 0.99,
+  "foreign_object_light": 0.99,
+  "foreign_object_hard": 0.99,
+  "cabinet_door_open": 0.99,
+  "nonmotor_vehicle": 0.99
+ },
+ "eps": 0.05,
+ "delta": 0.01,
+ "min_pos": 5
+}

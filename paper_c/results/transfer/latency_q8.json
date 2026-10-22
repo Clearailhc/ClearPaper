@@ -1,0 +1,26 @@
+{
+  "model": "/nas/home/ab/jev/models/Qwen/Qwen3-VL-8B-Instruct",
+  "n": 100,
+  "branches": 15,
+  "direct": {
+    "median_s": 0.2883725324936677,
+    "mean_s": 0.28703974755917444,
+    "p95_s": 0.29911311059258877,
+    "median_out_tokens": 1.0,
+    "mean_out_tokens": 1.0
+  },
+  "prism": {
+    "median_s": 0.2970093689946225,
+    "mean_s": 0.31256466492923207,
+    "p95_s": 0.4503667534372653,
+    "median_out_tokens": 1.0,
+    "mean_out_tokens": 1.0
+  },
+  "generative": {
+    "median_s": 1.1701450160035165,
+    "mean_s": 1.1685277391332785,
+    "p95_s": 1.4446858803596114,
+    "median_out_tokens": 163.5,
+    "mean_out_tokens": 162.93
+  }
+}

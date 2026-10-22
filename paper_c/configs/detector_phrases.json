@@ -1,0 +1,8 @@
+{"_doc": "V32 (research_log #64): one open-vocabulary detection phrase per primitive, fixed before any detector result. Absence-type primitives (no_*) have no object to box; they get the closest visual phrase.",
+ "open_flame": "open flame", "smoke": "smoke", "personnel_collapse": "person lying on the ground",
+ "smoking": "person smoking a cigarette", "oil_leakage": "oil leaking from equipment",
+ "no_hard_hat": "person without a safety helmet", "no_gloves": "bare hands", "no_mask": "face without a mask",
+ "mobile_phone": "person using a mobile phone", "water_pooling": "puddle of water on the floor",
+ "oil_accumulation": "oil stain on the floor", "foreign_object_light": "plastic bag or plastic bottle",
+ "foreign_object_hard": "wooden board or metal debris", "cabinet_door_open": "open cabinet door",
+ "nonmotor_vehicle": "bicycle or electric scooter"}

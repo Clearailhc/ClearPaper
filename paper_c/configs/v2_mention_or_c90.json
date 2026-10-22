@@ -1,0 +1,7 @@
+{
+ "_doc": "v2 (research_log #132): OR datasets (BDD-OIA, MMAD), LUX initial c0 = 0.9 then exposed-cell EM; eps / delta / min_pos as mmad_atoms_mention.json",
+ "c": 0.9,
+ "eps": 0.05,
+ "delta": 0.0,
+ "min_pos": 3
+}

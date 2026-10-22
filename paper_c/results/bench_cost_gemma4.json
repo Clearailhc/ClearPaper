@@ -1,0 +1,21 @@
+{
+  "model": "/nas/home/ab/jev/models/google/gemma-4-E4B-it",
+  "n_images": 200,
+  "branches": 15,
+  "direct": {
+    "seconds": 14.330891609191895,
+    "s_per_image": 0.07165445804595948
+  },
+  "fanout_all": {
+    "seconds": 57.932432889938354,
+    "s_per_image": 0.2896621644496918
+  },
+  "fanout_grouped": {
+    "seconds": 59.48787808418274,
+    "s_per_image": 0.2974393904209137
+  },
+  "fanout_nocache": {
+    "seconds": 67.3896472454071,
+    "s_per_image": 0.3369482362270355
+  }
+}

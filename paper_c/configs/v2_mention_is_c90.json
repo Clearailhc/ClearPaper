@@ -1,0 +1,23 @@
+{
+ "_doc": "v2 (research_log #132): InspecSafe mention channel with c_j = 0.9 for every fact (LUX initial value c0, then exposed-cell EM); eps / delta / min_pos as mention_freq.json",
+ "c": {
+  "open_flame": 0.9,
+  "smoke": 0.9,
+  "personnel_collapse": 0.9,
+  "smoking": 0.9,
+  "oil_leakage": 0.9,
+  "no_hard_hat": 0.9,
+  "no_gloves": 0.9,
+  "no_mask": 0.9,
+  "mobile_phone": 0.9,
+  "water_pooling": 0.9,
+  "oil_accumulation": 0.9,
+  "foreign_object_light": 0.9,
+  "foreign_object_hard": 0.9,
+  "cabinet_door_open": 0.9,
+  "nonmotor_vehicle": 0.9
+ },
+ "eps": 0.05,
+ "delta": 0.01,
+ "min_pos": 5
+}

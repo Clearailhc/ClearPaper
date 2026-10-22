@@ -1,0 +1,5 @@
+{"_doc": "Mention-channel parameters c_j = P(described | present), the Elkan-Noto e1 estimates of research_log #45 (fixed before any latent-MIL run).",
+ "c": {"open_flame": 0.93, "smoke": 0.90, "personnel_collapse": 0.92, "smoking": 0.82, "oil_leakage": 0.92, "no_hard_hat": 0.95,
+       "no_gloves": 0.95, "no_mask": 0.90, "mobile_phone": 0.87, "water_pooling": 0.80, "oil_accumulation": 0.92,
+       "foreign_object_light": 0.99, "foreign_object_hard": 0.92, "cabinet_door_open": 0.92, "nonmotor_vehicle": 0.94},
+ "eps": 0.05, "delta": 0.01, "min_pos": 5}

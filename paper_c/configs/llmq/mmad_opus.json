@@ -1,0 +1,1011 @@
+{
+ "_doc": [
+  "v2 question source = opus: Claude Opus 5.5, same prompts, answered by hand without images or results (research_log #131)",
+  "facts missing in the output: []",
+  "V40: MMAD atoms = dataset defect types, OR policy (research_log #83)"
+ ],
+ "levels": {
+  "risk_index_to_name": [
+   "good",
+   "defective"
+  ],
+  "risk_index_to_roman": [
+   "0",
+   "1"
+  ]
+ },
+ "industries": [
+  "GoodsAD/cigarette_box",
+  "GoodsAD/drink_bottle",
+  "GoodsAD/drink_can",
+  "GoodsAD/food_bottle",
+  "GoodsAD/food_box",
+  "GoodsAD/food_package",
+  "MVTec-LOCO/breakfast_box",
+  "MVTec-LOCO/juice_bottle",
+  "MVTec-LOCO/pushpins",
+  "MVTec-LOCO/screw_bag",
+  "MVTec-LOCO/splicing_connectors",
+  "MVTec/bottle",
+  "MVTec/cable",
+  "MVTec/capsule",
+  "MVTec/carpet",
+  "MVTec/grid",
+  "MVTec/hazelnut",
+  "MVTec/leather",
+  "MVTec/metal_nut",
+  "MVTec/pill",
+  "MVTec/screw",
+  "MVTec/tile",
+  "MVTec/toothbrush",
+  "MVTec/transistor",
+  "MVTec/wood",
+  "MVTec/zipper",
+  "VisA/candle",
+  "VisA/capsules",
+  "VisA/cashew",
+  "VisA/chewinggum",
+  "VisA/fryum",
+  "VisA/macaroni1",
+  "VisA/macaroni2",
+  "VisA/pcb1",
+  "VisA/pcb2",
+  "VisA/pcb3",
+  "VisA/pcb4",
+  "VisA/pipe_fryum"
+ ],
+ "industry_prefix_rules": [],
+ "primitives": [
+  {
+   "id": "GoodsAD/cigarette_box/opened",
+   "question": "Has the cigarette box been opened, with a lifted flap or a disturbed seal?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cigarette box in this image. Does it show this defect: opened?"
+  },
+  {
+   "id": "GoodsAD/drink_bottle/cap_half_open",
+   "question": "Is the bottle cap only partly closed, slightly unscrewed or misaligned with a small gap at the neck?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink bottle in this image. Does it show this defect: cap half open?"
+  },
+  {
+   "id": "GoodsAD/drink_bottle/cap_open",
+   "question": "Is the bottle cap open, with a clear gap between the cap and the bottle neck?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink bottle in this image. Does it show this defect: cap open?"
+  },
+  {
+   "id": "GoodsAD/drink_bottle/surface_damage",
+   "question": "Does the drink bottle surface or label show damage such as scratches, dents, discoloration or smudges?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink bottle in this image. Does it show this defect: surface damage?"
+  },
+  {
+   "id": "GoodsAD/drink_can/deformation",
+   "question": "Is the drink container deformed, with dents, crumpled areas or compressions in its shape?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink can in this image. Does it show this defect: deformation?"
+  },
+  {
+   "id": "GoodsAD/drink_can/straw_missing",
+   "question": "Is the straw that should be attached to the drink carton missing?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink can in this image. Does it show this defect: straw missing?"
+  },
+  {
+   "id": "GoodsAD/drink_can/surface_damage",
+   "question": "Does the drink can surface show damage such as scratches, dents or discoloration?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink can in this image. Does it show this defect: surface damage?"
+  },
+  {
+   "id": "GoodsAD/food_bottle/deformation",
+   "question": "Is the food container deformed, with dents, warps, crushed or bulging areas?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food bottle in this image. Does it show this defect: deformation?"
+  },
+  {
+   "id": "GoodsAD/food_bottle/opened",
+   "question": "Has the food container been opened, with a broken, torn or peeling seal or lid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food bottle in this image. Does it show this defect: opened?"
+  },
+  {
+   "id": "GoodsAD/food_bottle/surface_damage",
+   "question": "Does the food container surface show damage such as scratches, dents or discoloration?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food bottle in this image. Does it show this defect: surface damage?"
+  },
+  {
+   "id": "GoodsAD/food_box/deformation",
+   "question": "Is the food box deformed, with creased, crushed, bent or warped areas?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food box in this image. Does it show this defect: deformation?"
+  },
+  {
+   "id": "GoodsAD/food_box/opened",
+   "question": "Has the food box been opened or torn, with a disturbed or lifted seal?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food box in this image. Does it show this defect: opened?"
+  },
+  {
+   "id": "GoodsAD/food_box/surface_damage",
+   "question": "Does the food box surface show damage such as scratches, scuffs, smudges or discoloration?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food box in this image. Does it show this defect: surface damage?"
+  },
+  {
+   "id": "GoodsAD/food_package/broken",
+   "question": "Is the food package broken, with a tear, rupture or puncture in the packaging?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food package in this image. Does it show this defect: broken?"
+  },
+  {
+   "id": "GoodsAD/food_package/surface_anomaly",
+   "question": "Does the food package surface show dark areas, discoloration, smudges or printing errors?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food package in this image. Does it show this defect: surface anomaly?"
+  },
+  {
+   "id": "MVTec-LOCO/breakfast_box/logical_anomalies",
+   "question": "Are the breakfast box contents wrong, such as missing, extra, swapped or overflowing food items?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the breakfast box in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/breakfast_box/structural_anomalies",
+   "question": "Is any food in the breakfast box damaged or contaminated, such as bruised fruit or foreign material?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the breakfast box in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/juice_bottle/logical_anomalies",
+   "question": "Is the juice bottle inconsistent, such as a missing or misplaced label, a wrong fill level, or a label not matching the juice?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the juice bottle in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/juice_bottle/structural_anomalies",
+   "question": "Is the juice bottle label physically damaged, such as torn, peeling, wrinkled, crooked or stained?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the juice bottle in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/pushpins/logical_anomalies",
+   "question": "Does any compartment of the pushpin box hold no pushpin or more than one, or is a separator missing?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pushpins in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/pushpins/structural_anomalies",
+   "question": "Is any pushpin physically damaged, such as a bent or broken pin or a broken or detached head?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pushpins in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/screw_bag/logical_anomalies",
+   "question": "Does the screw bag hold the wrong set of parts, such as missing, extra or wrongly sized screws, nuts or washers?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw bag in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/screw_bag/structural_anomalies",
+   "question": "Is any part in the screw bag, or the bag itself, physically damaged, broken, torn or contaminated?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw bag in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/splicing_connectors/logical_anomalies",
+   "question": "Is the cable between the splicing connectors wrong, such as missing, the wrong color, too long or wrongly routed?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the splicing connectors in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/splicing_connectors/structural_anomalies",
+   "question": "Is a splicing connector or cable physically damaged, flipped, or not fully inserted?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the splicing connectors in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec/bottle/broken_large",
+   "question": "Does the bottle rim have a large break, with a big jagged piece missing?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the bottle in this image. Does it show this defect: broken large?"
+  },
+  {
+   "id": "MVTec/bottle/broken_small",
+   "question": "Does the bottle rim have a small chip, with a small piece of material missing?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the bottle in this image. Does it show this defect: broken small?"
+  },
+  {
+   "id": "MVTec/bottle/contamination",
+   "question": "Is there contamination or residue inside the bottle opening, such as light patches, smudges or foreign substance?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the bottle in this image. Does it show this defect: contamination?"
+  },
+  {
+   "id": "MVTec/cable/bent_wire",
+   "question": "Are the wires of the cable bent or splayed out of their neat arrangement?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: bent wire?"
+  },
+  {
+   "id": "MVTec/cable/cable_swap",
+   "question": "Are the colored insulated conductors of the cable in the wrong positions?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: cable swap?"
+  },
+  {
+   "id": "MVTec/cable/cut_inner_insulation",
+   "question": "Is the insulation of an inner conductor cut, exposing the metal wires?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: cut inner insulation?"
+  },
+  {
+   "id": "MVTec/cable/cut_outer_insulation",
+   "question": "Is the outer insulation of the cable cut or torn?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: cut outer insulation?"
+  },
+  {
+   "id": "MVTec/cable/missing_cable",
+   "question": "Is one of the insulated conductors missing from the cable?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: missing cable?"
+  },
+  {
+   "id": "MVTec/cable/missing_wire",
+   "question": "Are metal strands missing from a conductor core, leaving a visible void?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: missing wire?"
+  },
+  {
+   "id": "MVTec/cable/poke_insulation",
+   "question": "Is the insulation of a conductor poked or punctured?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: poke insulation?"
+  },
+  {
+   "id": "MVTec/capsule/crack",
+   "question": "Is there a crack on the capsule surface?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: crack?"
+  },
+  {
+   "id": "MVTec/capsule/faulty_imprint",
+   "question": "Is the printed text on the capsule incomplete, smeared or blurred?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: faulty imprint?"
+  },
+  {
+   "id": "MVTec/capsule/poke",
+   "question": "Is there a small poke, puncture or indentation on the capsule surface?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: poke?"
+  },
+  {
+   "id": "MVTec/capsule/scratch",
+   "question": "Are there scratches on the capsule surface?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: scratch?"
+  },
+  {
+   "id": "MVTec/capsule/squeeze",
+   "question": "Is the capsule squeezed or deformed out of its normal shape?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: squeeze?"
+  },
+  {
+   "id": "MVTec/carpet/color",
+   "question": "Is there a discolored patch or spot on the carpet?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/carpet/cut",
+   "question": "Is there a cut in the carpet fabric with frayed threads?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: cut?"
+  },
+  {
+   "id": "MVTec/carpet/hole",
+   "question": "Is there a hole in the carpet fabric?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: hole?"
+  },
+  {
+   "id": "MVTec/carpet/metal_contamination",
+   "question": "Is there a small metal object embedded in the carpet?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: metal contamination?"
+  },
+  {
+   "id": "MVTec/carpet/thread",
+   "question": "Is there a loose or stray thread on the carpet?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: thread?"
+  },
+  {
+   "id": "MVTec/grid/bent",
+   "question": "Are any grid lines or cells bent or misshapen?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: bent?"
+  },
+  {
+   "id": "MVTec/grid/broken",
+   "question": "Is the grid broken, with a gap where strands are missing?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: broken?"
+  },
+  {
+   "id": "MVTec/grid/glue",
+   "question": "Is there glue or other foreign residue on the grid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: glue?"
+  },
+  {
+   "id": "MVTec/grid/metal_contamination",
+   "question": "Are there metal pieces lying on the grid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: metal contamination?"
+  },
+  {
+   "id": "MVTec/grid/thread",
+   "question": "Is there a stray thread on the grid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: thread?"
+  },
+  {
+   "id": "MVTec/hazelnut/crack",
+   "question": "Is the hazelnut shell cracked or broken open?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the hazelnut in this image. Does it show this defect: crack?"
+  },
+  {
+   "id": "MVTec/hazelnut/cut",
+   "question": "Is there a straight cut line on the hazelnut shell?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the hazelnut in this image. Does it show this defect: cut?"
+  },
+  {
+   "id": "MVTec/hazelnut/hole",
+   "question": "Is there a hole in the hazelnut shell?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the hazelnut in this image. Does it show this defect: hole?"
+  },
+  {
+   "id": "MVTec/hazelnut/print",
+   "question": "Are there white printed marks on the hazelnut shell?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the hazelnut in this image. Does it show this defect: print?"
+  },
+  {
+   "id": "MVTec/leather/color",
+   "question": "Is there a discolored spot on the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/leather/cut",
+   "question": "Is there a cut or tear in the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: cut?"
+  },
+  {
+   "id": "MVTec/leather/fold",
+   "question": "Is there a fold or crease in the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: fold?"
+  },
+  {
+   "id": "MVTec/leather/glue",
+   "question": "Is there a shiny glue or adhesive spot on the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: glue?"
+  },
+  {
+   "id": "MVTec/leather/poke",
+   "question": "Is there a small puncture or poke hole in the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: poke?"
+  },
+  {
+   "id": "MVTec/metal_nut/bent",
+   "question": "Is the metal nut bent, with its outline distorted?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the metal nut in this image. Does it show this defect: bent?"
+  },
+  {
+   "id": "MVTec/metal_nut/color",
+   "question": "Is there a discolored area on the metal nut, such as a blue, red or pink patch?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the metal nut in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/metal_nut/scratch",
+   "question": "Is there a scratch on the metal nut surface?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the metal nut in this image. Does it show this defect: scratch?"
+  },
+  {
+   "id": "MVTec/pill/color",
+   "question": "Are there abnormal color spots on the pill, other than its normal red speckles?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/pill/contamination",
+   "question": "Is there foreign material or contamination on the pill?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: contamination?"
+  },
+  {
+   "id": "MVTec/pill/crack",
+   "question": "Is there a crack in the pill?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: crack?"
+  },
+  {
+   "id": "MVTec/pill/faulty_imprint",
+   "question": "Is the letter imprint on the pill incomplete or faulty?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: faulty imprint?"
+  },
+  {
+   "id": "MVTec/pill/scratch",
+   "question": "Is there a scratch or abrasion on the pill surface?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: scratch?"
+  },
+  {
+   "id": "MVTec/screw/manipulated_front",
+   "question": "Is the tip of the screw deformed or blunted?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: manipulated front?"
+  },
+  {
+   "id": "MVTec/screw/scratch_head",
+   "question": "Is there a scratch on the screw head?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: scratch head?"
+  },
+  {
+   "id": "MVTec/screw/scratch_neck",
+   "question": "Is there a scratch on the screw neck, just below the head?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: scratch neck?"
+  },
+  {
+   "id": "MVTec/screw/thread_side",
+   "question": "Is the thread along the side of the screw shaft deformed or damaged?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: thread side?"
+  },
+  {
+   "id": "MVTec/screw/thread_top",
+   "question": "Is the thread at the top end of the screw deformed or damaged?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: thread top?"
+  },
+  {
+   "id": "MVTec/tile/crack",
+   "question": "Is there a crack in the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: crack?"
+  },
+  {
+   "id": "MVTec/tile/glue_strip",
+   "question": "Is there a translucent glue strip stuck on the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: glue strip?"
+  },
+  {
+   "id": "MVTec/tile/gray_stroke",
+   "question": "Is there a gray stroke mark on the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: gray stroke?"
+  },
+  {
+   "id": "MVTec/tile/oil",
+   "question": "Is there an oily or brownish stain on the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: oil?"
+  },
+  {
+   "id": "MVTec/tile/rough",
+   "question": "Is part of the tile surface rough or irregular in texture?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: rough?"
+  },
+  {
+   "id": "MVTec/toothbrush/defective",
+   "question": "Are the toothbrush bristles defective, such as missing, disordered or contaminated?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the toothbrush in this image. Does it show this defect: defective?"
+  },
+  {
+   "id": "MVTec/transistor/bent_lead",
+   "question": "Is a lead of the transistor bent out of line?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the transistor in this image. Does it show this defect: bent lead?"
+  },
+  {
+   "id": "MVTec/transistor/cut_lead",
+   "question": "Is a lead of the transistor cut short?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the transistor in this image. Does it show this defect: cut lead?"
+  },
+  {
+   "id": "MVTec/transistor/damaged_case",
+   "question": "Is the black case of the transistor chipped, broken or deformed?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the transistor in this image. Does it show this defect: damaged case?"
+  },
+  {
+   "id": "MVTec/transistor/misplaced",
+   "question": "Is the transistor misplaced, shifted, rotated or missing from its position?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the transistor in this image. Does it show this defect: misplaced?"
+  },
+  {
+   "id": "MVTec/wood/color",
+   "question": "Is there an abnormal color spot or streak on the wood?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the wood in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/wood/hole",
+   "question": "Is there a hole in the wood?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the wood in this image. Does it show this defect: hole?"
+  },
+  {
+   "id": "MVTec/wood/liquid",
+   "question": "Is there a liquid stain on the wood?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the wood in this image. Does it show this defect: liquid?"
+  },
+  {
+   "id": "MVTec/wood/scratch",
+   "question": "Is there a scratch on the wood surface?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the wood in this image. Does it show this defect: scratch?"
+  },
+  {
+   "id": "MVTec/zipper/broken_teeth",
+   "question": "Are any zipper teeth broken or missing?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: broken teeth?"
+  },
+  {
+   "id": "MVTec/zipper/fabric_border",
+   "question": "Is the fabric border of the zipper frayed?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: fabric border?"
+  },
+  {
+   "id": "MVTec/zipper/fabric_interior",
+   "question": "Is the fabric next to the zipper teeth damaged, snagged or discolored?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: fabric interior?"
+  },
+  {
+   "id": "MVTec/zipper/rough",
+   "question": "Are the zipper teeth rough or irregular?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: rough?"
+  },
+  {
+   "id": "MVTec/zipper/split_teeth",
+   "question": "Are the zipper teeth split apart where they should interlock?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: split teeth?"
+  },
+  {
+   "id": "MVTec/zipper/squeezed_teeth",
+   "question": "Are any zipper teeth squeezed or pressed out of shape?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: squeezed teeth?"
+  },
+  {
+   "id": "VisA/candle/bad",
+   "question": "Does a candle show a defect such as a color spot, chip, missing wax, extra wax or foreign particle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the candle in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/capsules/bad",
+   "question": "Is any capsule discolored, bubbled or irregular in shape?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsules in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/cashew/bad",
+   "question": "Does the cashew show a defect such as being stuck to another, broken, holed, scratched or burnt?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cashew in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/chewinggum/bad",
+   "question": "Is material missing from the chewing gum, or is its surface scratched or damaged?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the chewinggum in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/fryum/bad",
+   "question": "Does the fryum show a defect such as a color spot, scratch, breakage or fused pieces?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the fryum in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/macaroni1/bad",
+   "question": "Does a macaroni piece show a dark spot, chip, crack or scratch?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the macaroni1 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/macaroni2/bad",
+   "question": "Does a macaroni piece show a chip, crack, scratch or discolored spot?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the macaroni2 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pcb1/bad",
+   "question": "Does the circuit board show melted, deformed, discolored or scratched areas?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pcb1 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pcb2/bad",
+   "question": "Does the circuit board show melted, heat-damaged or discolored areas?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pcb2 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pcb3/bad",
+   "question": "Does the circuit board show heat damage, a scratch, a missing component or a bent component?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pcb3 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pcb4/bad",
+   "question": "Does the circuit board show a burnt area, missing or misaligned component, extra material, scratch or dirt?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pcb4 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pipe_fryum/bad",
+   "question": "Does the pipe fryum show a defect such as fused pieces, scratches, burnt spots or breakage?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pipe fryum in this image. Does it show this defect: bad?"
+  }
+ ],
+ "severity": {
+  "GoodsAD/cigarette_box": {
+   "GoodsAD/cigarette_box/opened": 1
+  },
+  "GoodsAD/drink_bottle": {
+   "GoodsAD/drink_bottle/cap_half_open": 1,
+   "GoodsAD/drink_bottle/cap_open": 1,
+   "GoodsAD/drink_bottle/surface_damage": 1
+  },
+  "GoodsAD/drink_can": {
+   "GoodsAD/drink_can/deformation": 1,
+   "GoodsAD/drink_can/straw_missing": 1,
+   "GoodsAD/drink_can/surface_damage": 1
+  },
+  "GoodsAD/food_bottle": {
+   "GoodsAD/food_bottle/deformation": 1,
+   "GoodsAD/food_bottle/opened": 1,
+   "GoodsAD/food_bottle/surface_damage": 1
+  },
+  "GoodsAD/food_box": {
+   "GoodsAD/food_box/deformation": 1,
+   "GoodsAD/food_box/opened": 1,
+   "GoodsAD/food_box/surface_damage": 1
+  },
+  "GoodsAD/food_package": {
+   "GoodsAD/food_package/broken": 1,
+   "GoodsAD/food_package/surface_anomaly": 1
+  },
+  "MVTec-LOCO/breakfast_box": {
+   "MVTec-LOCO/breakfast_box/logical_anomalies": 1,
+   "MVTec-LOCO/breakfast_box/structural_anomalies": 1
+  },
+  "MVTec-LOCO/juice_bottle": {
+   "MVTec-LOCO/juice_bottle/logical_anomalies": 1,
+   "MVTec-LOCO/juice_bottle/structural_anomalies": 1
+  },
+  "MVTec-LOCO/pushpins": {
+   "MVTec-LOCO/pushpins/logical_anomalies": 1,
+   "MVTec-LOCO/pushpins/structural_anomalies": 1
+  },
+  "MVTec-LOCO/screw_bag": {
+   "MVTec-LOCO/screw_bag/logical_anomalies": 1,
+   "MVTec-LOCO/screw_bag/structural_anomalies": 1
+  },
+  "MVTec-LOCO/splicing_connectors": {
+   "MVTec-LOCO/splicing_connectors/logical_anomalies": 1,
+   "MVTec-LOCO/splicing_connectors/structural_anomalies": 1
+  },
+  "MVTec/bottle": {
+   "MVTec/bottle/broken_large": 1,
+   "MVTec/bottle/broken_small": 1,
+   "MVTec/bottle/contamination": 1
+  },
+  "MVTec/cable": {
+   "MVTec/cable/bent_wire": 1,
+   "MVTec/cable/cable_swap": 1,
+   "MVTec/cable/cut_inner_insulation": 1,
+   "MVTec/cable/cut_outer_insulation": 1,
+   "MVTec/cable/missing_cable": 1,
+   "MVTec/cable/missing_wire": 1,
+   "MVTec/cable/poke_insulation": 1
+  },
+  "MVTec/capsule": {
+   "MVTec/capsule/crack": 1,
+   "MVTec/capsule/faulty_imprint": 1,
+   "MVTec/capsule/poke": 1,
+   "MVTec/capsule/scratch": 1,
+   "MVTec/capsule/squeeze": 1
+  },
+  "MVTec/carpet": {
+   "MVTec/carpet/color": 1,
+   "MVTec/carpet/cut": 1,
+   "MVTec/carpet/hole": 1,
+   "MVTec/carpet/metal_contamination": 1,
+   "MVTec/carpet/thread": 1
+  },
+  "MVTec/grid": {
+   "MVTec/grid/bent": 1,
+   "MVTec/grid/broken": 1,
+   "MVTec/grid/glue": 1,
+   "MVTec/grid/metal_contamination": 1,
+   "MVTec/grid/thread": 1
+  },
+  "MVTec/hazelnut": {
+   "MVTec/hazelnut/crack": 1,
+   "MVTec/hazelnut/cut": 1,
+   "MVTec/hazelnut/hole": 1,
+   "MVTec/hazelnut/print": 1
+  },
+  "MVTec/leather": {
+   "MVTec/leather/color": 1,
+   "MVTec/leather/cut": 1,
+   "MVTec/leather/fold": 1,
+   "MVTec/leather/glue": 1,
+   "MVTec/leather/poke": 1
+  },
+  "MVTec/metal_nut": {
+   "MVTec/metal_nut/bent": 1,
+   "MVTec/metal_nut/color": 1,
+   "MVTec/metal_nut/scratch": 1
+  },
+  "MVTec/pill": {
+   "MVTec/pill/color": 1,
+   "MVTec/pill/contamination": 1,
+   "MVTec/pill/crack": 1,
+   "MVTec/pill/faulty_imprint": 1,
+   "MVTec/pill/scratch": 1
+  },
+  "MVTec/screw": {
+   "MVTec/screw/manipulated_front": 1,
+   "MVTec/screw/scratch_head": 1,
+   "MVTec/screw/scratch_neck": 1,
+   "MVTec/screw/thread_side": 1,
+   "MVTec/screw/thread_top": 1
+  },
+  "MVTec/tile": {
+   "MVTec/tile/crack": 1,
+   "MVTec/tile/glue_strip": 1,
+   "MVTec/tile/gray_stroke": 1,
+   "MVTec/tile/oil": 1,
+   "MVTec/tile/rough": 1
+  },
+  "MVTec/toothbrush": {
+   "MVTec/toothbrush/defective": 1
+  },
+  "MVTec/transistor": {
+   "MVTec/transistor/bent_lead": 1,
+   "MVTec/transistor/cut_lead": 1,
+   "MVTec/transistor/damaged_case": 1,
+   "MVTec/transistor/misplaced": 1
+  },
+  "MVTec/wood": {
+   "MVTec/wood/color": 1,
+   "MVTec/wood/hole": 1,
+   "MVTec/wood/liquid": 1,
+   "MVTec/wood/scratch": 1
+  },
+  "MVTec/zipper": {
+   "MVTec/zipper/broken_teeth": 1,
+   "MVTec/zipper/fabric_border": 1,
+   "MVTec/zipper/fabric_interior": 1,
+   "MVTec/zipper/rough": 1,
+   "MVTec/zipper/split_teeth": 1,
+   "MVTec/zipper/squeezed_teeth": 1
+  },
+  "VisA/candle": {
+   "VisA/candle/bad": 1
+  },
+  "VisA/capsules": {
+   "VisA/capsules/bad": 1
+  },
+  "VisA/cashew": {
+   "VisA/cashew/bad": 1
+  },
+  "VisA/chewinggum": {
+   "VisA/chewinggum/bad": 1
+  },
+  "VisA/fryum": {
+   "VisA/fryum/bad": 1
+  },
+  "VisA/macaroni1": {
+   "VisA/macaroni1/bad": 1
+  },
+  "VisA/macaroni2": {
+   "VisA/macaroni2/bad": 1
+  },
+  "VisA/pcb1": {
+   "VisA/pcb1/bad": 1
+  },
+  "VisA/pcb2": {
+   "VisA/pcb2/bad": 1
+  },
+  "VisA/pcb3": {
+   "VisA/pcb3/bad": 1
+  },
+  "VisA/pcb4": {
+   "VisA/pcb4/bad": 1
+  },
+  "VisA/pipe_fryum": {
+   "VisA/pipe_fryum/bad": 1
+  }
+ },
+ "verdict_questions": {
+  "GoodsAD/cigarette_box": "Does the cigarette box have any defect?",
+  "GoodsAD/drink_bottle": "Does the drink bottle have any defect?",
+  "GoodsAD/drink_can": "Does the drink can have any defect?",
+  "GoodsAD/food_bottle": "Does the food bottle have any defect?",
+  "GoodsAD/food_box": "Does the food box have any defect?",
+  "GoodsAD/food_package": "Does the food package have any defect?",
+  "MVTec-LOCO/breakfast_box": "Does the breakfast box have any defect?",
+  "MVTec-LOCO/juice_bottle": "Does the juice bottle have any defect?",
+  "MVTec-LOCO/pushpins": "Do the pushpins have any defect?",
+  "MVTec-LOCO/screw_bag": "Does the screw bag have any defect?",
+  "MVTec-LOCO/splicing_connectors": "Do the splicing connectors have any defect?",
+  "MVTec/bottle": "Does the bottle have any defect?",
+  "MVTec/cable": "Does the cable have any defect?",
+  "MVTec/capsule": "Does the capsule have any defect?",
+  "MVTec/carpet": "Does the carpet have any defect?",
+  "MVTec/grid": "Does the grid have any defect?",
+  "MVTec/hazelnut": "Does the hazelnut have any defect?",
+  "MVTec/leather": "Does the leather have any defect?",
+  "MVTec/metal_nut": "Does the metal nut have any defect?",
+  "MVTec/pill": "Does the pill have any defect?",
+  "MVTec/screw": "Does the screw have any defect?",
+  "MVTec/tile": "Does the tile have any defect?",
+  "MVTec/toothbrush": "Does the toothbrush have any defect?",
+  "MVTec/transistor": "Does the transistor have any defect?",
+  "MVTec/wood": "Does the wood have any defect?",
+  "MVTec/zipper": "Does the zipper have any defect?",
+  "VisA/candle": "Does the candle have any defect?",
+  "VisA/capsules": "Do the capsules have any defect?",
+  "VisA/cashew": "Does the cashew have any defect?",
+  "VisA/chewinggum": "Does the chewing gum have any defect?",
+  "VisA/fryum": "Does the fryum have any defect?",
+  "VisA/macaroni1": "Does the macaroni have any defect?",
+  "VisA/macaroni2": "Does the macaroni have any defect?",
+  "VisA/pcb1": "Does the circuit board have any defect?",
+  "VisA/pcb2": "Does the circuit board have any defect?",
+  "VisA/pcb3": "Does the circuit board have any defect?",
+  "VisA/pcb4": "Does the circuit board have any defect?",
+  "VisA/pipe_fryum": "Does the pipe fryum have any defect?"
+ },
+ "instruction": "Answer the question about this image with a single word: Yes or No."
+}

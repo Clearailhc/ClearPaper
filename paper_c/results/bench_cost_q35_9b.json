@@ -1,0 +1,21 @@
+{
+  "model": "/nas/home/ab/jev/models/Qwen/Qwen3.5-9B",
+  "n_images": 200,
+  "branches": 15,
+  "direct": {
+    "seconds": 39.28940939903259,
+    "s_per_image": 0.19644704699516297
+  },
+  "fanout_all": {
+    "seconds": 172.01099109649658,
+    "s_per_image": 0.8600549554824829
+  },
+  "fanout_grouped": {
+    "seconds": 174.23925495147705,
+    "s_per_image": 0.8711962747573853
+  },
+  "fanout_nocache": {
+    "seconds": 323.8956813812256,
+    "s_per_image": 1.6194784069061279
+  }
+}

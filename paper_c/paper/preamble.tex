@@ -1,0 +1,24 @@
+%% Packages and macros for the LUX paper (loaded before hyperref). Based on the CVPR author-kit preamble.
+\usepackage{cuted}      % two-column teaser (strip)
+\usepackage{currfile}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{xspace}
+% \usepackage{microtype}  % enable at the very end if slightly over the page limit
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newcommand{\lux}{\textsc{Lux}\xspace}
+%% Drafting marks - set to empty before submission (see the two lines below)
+\newcommand{\TBD}[1]{\textcolor{red}{[TBD: #1]}}
+\newcommand{\FIG}[1]{\textcolor{blue}{[FIGURE: #1]}}
+% \renewcommand{\TBD}[1]{}
+% \renewcommand{\FIG}[1]{}

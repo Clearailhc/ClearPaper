@@ -1,0 +1,18 @@
+%% Figure 1 (two-column teaser): "cigarette or open flame?" - InspecSafe sheet S032.
+%% Panel data: results/fig1_industrial/STORY_figure1.md and story.json (research_log #124).
+\begin{strip}
+\centering
+\IfFileExists{figures/teaser.pdf}{\includegraphics[width=\linewidth]{figures/teaser.pdf}}{%
+  \fbox{\parbox[c][4.2cm][c]{0.96\linewidth}{\centering\FIG{teaser.pdf --- (a) old rule: smoking decides ``level one'', open flame has exposure 0;
+  (b) rule edit (smoking downgraded): the verdict-trained model reads the cigarette as an open flame (0.95) and stays at level one;
+  (c) \lux, table edited only: open flame 0.00, level two (blind human label).}}}}
+\captionsetup{hypcap=false}
+\captionof{figure}{\textbf{Overexposed facts surface when the rule changes.} (a) Under the official rule, smoking alone makes this
+scene level one, so every other fact---including \emph{open flame}---has zero exposure: the verdict carries no information about
+it. (b) After smoking is downgraded to level two, a model trained on verdicts reads the cigarette as an open flame (0.95) and keeps
+the scene at level one; a direct model told the new rule does the same. The untrained model is correct. (c) \lux reads calibrated
+facts (open flame 0.00) and, with the rule table edited and no retraining, outputs level two, matching the blind human label.
+Over all facts, verdict training raises the false-positive rate on clipped cells from 0.14 to 0.23--0.30; \lux: 0.05.}
+\captionsetup{hypcap=true}
+\label{fig:teaser}
+\end{strip}

@@ -1,0 +1,26 @@
+{
+  "model": "/nas/home/ab/jev/models/Qwen/Qwen3-VL-32B-Instruct",
+  "n": 100,
+  "branches": 15,
+  "direct": {
+    "median_s": 1.0387342150061158,
+    "mean_s": 1.0351879457198083,
+    "p95_s": 1.0698624591401313,
+    "median_out_tokens": 1.0,
+    "mean_out_tokens": 1.0
+  },
+  "prism": {
+    "median_s": 1.0104326290020254,
+    "mean_s": 1.008208477400476,
+    "p95_s": 1.0401803346991074,
+    "median_out_tokens": 1.0,
+    "mean_out_tokens": 1.0
+  },
+  "generative": {
+    "median_s": 8.888209227501648,
+    "mean_s": 9.08255520327948,
+    "p95_s": 11.31560163376125,
+    "median_out_tokens": 210.0,
+    "mean_out_tokens": 215.11
+  }
+}

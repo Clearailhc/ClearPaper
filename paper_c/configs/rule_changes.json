@@ -1,0 +1,8 @@
+{
+  "_doc": ["Pre-registered rule changes for the rule-change experiment (research_log #39, V16).",
+           "Fixed before any rule-change result was computed; chosen as plausible policy changes in both directions that move the level of test images (counts from the descriptions only).",
+           "R1: 48 test images change level (all upward); R2: 43 (all downward, creates 24 Level-three images); R3: 16 (downward)."],
+  "R1_ppe_stricter": {"set_all": {"no_gloves": 3, "no_mask": 3}},
+  "R2_ppe_relaxed": {"set_all": {"no_hard_hat": 2, "no_gloves": 1, "no_mask": 1}},
+  "R3_phone_smoking_relaxed": {"set_all": {"mobile_phone": 1, "smoking": 2}}
+}

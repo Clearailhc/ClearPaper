@@ -1,0 +1,6 @@
+\section{Discussion and limitations}
+\label{sec:discussion}
+
+\paragraph{When does \lux\ pay off?} When the rule will change, when facts are partly annotated, or when decisions must be audited. When the rule is fixed forever and only the verdict matters, a verdict-trained model is the right tool (Theorem~\ref{thm:suff} with $\mathcal Q=\delta_{S_0}$), and \lux\ costs up to about one point when facts are incompletely observed.
+
+\paragraph{Limitations.} (i) Overexposure is defined for monotone rules; non-monotone policies need a different exposure. (ii) Unidentified facts inherit the base model's error (Theorem~\ref{thm:mic} guarantees no worse than the base, not zero). (iii) The observation rate $c_j$ is identifiable only on exposed cells; estimating it on the training images is biased because the model's beliefs are fitted to the same annotations (\cref{app:em}), hence cross-fitting. (iv) Results use one backbone family. (v) InspecSafe rule-edit labels are derived from description facts until the human relabelling is complete.

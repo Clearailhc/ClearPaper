@@ -1,0 +1,1010 @@
+{
+ "_doc": [
+  "v2 question source = rule slot template 'Does the image show this: {name}?' (research_log #131)",
+  "V40: MMAD atoms = dataset defect types, OR policy (research_log #83)"
+ ],
+ "levels": {
+  "risk_index_to_name": [
+   "good",
+   "defective"
+  ],
+  "risk_index_to_roman": [
+   "0",
+   "1"
+  ]
+ },
+ "industries": [
+  "GoodsAD/cigarette_box",
+  "GoodsAD/drink_bottle",
+  "GoodsAD/drink_can",
+  "GoodsAD/food_bottle",
+  "GoodsAD/food_box",
+  "GoodsAD/food_package",
+  "MVTec-LOCO/breakfast_box",
+  "MVTec-LOCO/juice_bottle",
+  "MVTec-LOCO/pushpins",
+  "MVTec-LOCO/screw_bag",
+  "MVTec-LOCO/splicing_connectors",
+  "MVTec/bottle",
+  "MVTec/cable",
+  "MVTec/capsule",
+  "MVTec/carpet",
+  "MVTec/grid",
+  "MVTec/hazelnut",
+  "MVTec/leather",
+  "MVTec/metal_nut",
+  "MVTec/pill",
+  "MVTec/screw",
+  "MVTec/tile",
+  "MVTec/toothbrush",
+  "MVTec/transistor",
+  "MVTec/wood",
+  "MVTec/zipper",
+  "VisA/candle",
+  "VisA/capsules",
+  "VisA/cashew",
+  "VisA/chewinggum",
+  "VisA/fryum",
+  "VisA/macaroni1",
+  "VisA/macaroni2",
+  "VisA/pcb1",
+  "VisA/pcb2",
+  "VisA/pcb3",
+  "VisA/pcb4",
+  "VisA/pipe_fryum"
+ ],
+ "industry_prefix_rules": [],
+ "primitives": [
+  {
+   "id": "GoodsAD/cigarette_box/opened",
+   "question": "Does the image show this: opened on the cigarette box?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cigarette box in this image. Does it show this defect: opened?"
+  },
+  {
+   "id": "GoodsAD/drink_bottle/cap_half_open",
+   "question": "Does the image show this: cap half open on the drink bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink bottle in this image. Does it show this defect: cap half open?"
+  },
+  {
+   "id": "GoodsAD/drink_bottle/cap_open",
+   "question": "Does the image show this: cap open on the drink bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink bottle in this image. Does it show this defect: cap open?"
+  },
+  {
+   "id": "GoodsAD/drink_bottle/surface_damage",
+   "question": "Does the image show this: surface damage on the drink bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink bottle in this image. Does it show this defect: surface damage?"
+  },
+  {
+   "id": "GoodsAD/drink_can/deformation",
+   "question": "Does the image show this: deformation on the drink can?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink can in this image. Does it show this defect: deformation?"
+  },
+  {
+   "id": "GoodsAD/drink_can/straw_missing",
+   "question": "Does the image show this: straw missing on the drink can?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink can in this image. Does it show this defect: straw missing?"
+  },
+  {
+   "id": "GoodsAD/drink_can/surface_damage",
+   "question": "Does the image show this: surface damage on the drink can?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the drink can in this image. Does it show this defect: surface damage?"
+  },
+  {
+   "id": "GoodsAD/food_bottle/deformation",
+   "question": "Does the image show this: deformation on the food bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food bottle in this image. Does it show this defect: deformation?"
+  },
+  {
+   "id": "GoodsAD/food_bottle/opened",
+   "question": "Does the image show this: opened on the food bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food bottle in this image. Does it show this defect: opened?"
+  },
+  {
+   "id": "GoodsAD/food_bottle/surface_damage",
+   "question": "Does the image show this: surface damage on the food bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food bottle in this image. Does it show this defect: surface damage?"
+  },
+  {
+   "id": "GoodsAD/food_box/deformation",
+   "question": "Does the image show this: deformation on the food box?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food box in this image. Does it show this defect: deformation?"
+  },
+  {
+   "id": "GoodsAD/food_box/opened",
+   "question": "Does the image show this: opened on the food box?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food box in this image. Does it show this defect: opened?"
+  },
+  {
+   "id": "GoodsAD/food_box/surface_damage",
+   "question": "Does the image show this: surface damage on the food box?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food box in this image. Does it show this defect: surface damage?"
+  },
+  {
+   "id": "GoodsAD/food_package/broken",
+   "question": "Does the image show this: broken on the food package?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food package in this image. Does it show this defect: broken?"
+  },
+  {
+   "id": "GoodsAD/food_package/surface_anomaly",
+   "question": "Does the image show this: surface anomaly on the food package?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the food package in this image. Does it show this defect: surface anomaly?"
+  },
+  {
+   "id": "MVTec-LOCO/breakfast_box/logical_anomalies",
+   "question": "Does the image show this: logical anomalies on the breakfast box?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the breakfast box in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/breakfast_box/structural_anomalies",
+   "question": "Does the image show this: structural anomalies on the breakfast box?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the breakfast box in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/juice_bottle/logical_anomalies",
+   "question": "Does the image show this: logical anomalies on the juice bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the juice bottle in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/juice_bottle/structural_anomalies",
+   "question": "Does the image show this: structural anomalies on the juice bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the juice bottle in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/pushpins/logical_anomalies",
+   "question": "Does the image show this: logical anomalies on the pushpins?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pushpins in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/pushpins/structural_anomalies",
+   "question": "Does the image show this: structural anomalies on the pushpins?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pushpins in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/screw_bag/logical_anomalies",
+   "question": "Does the image show this: logical anomalies on the screw bag?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw bag in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/screw_bag/structural_anomalies",
+   "question": "Does the image show this: structural anomalies on the screw bag?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw bag in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/splicing_connectors/logical_anomalies",
+   "question": "Does the image show this: logical anomalies on the splicing connectors?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the splicing connectors in this image. Does it show this defect: logical anomalies?"
+  },
+  {
+   "id": "MVTec-LOCO/splicing_connectors/structural_anomalies",
+   "question": "Does the image show this: structural anomalies on the splicing connectors?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the splicing connectors in this image. Does it show this defect: structural anomalies?"
+  },
+  {
+   "id": "MVTec/bottle/broken_large",
+   "question": "Does the image show this: broken large on the bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the bottle in this image. Does it show this defect: broken large?"
+  },
+  {
+   "id": "MVTec/bottle/broken_small",
+   "question": "Does the image show this: broken small on the bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the bottle in this image. Does it show this defect: broken small?"
+  },
+  {
+   "id": "MVTec/bottle/contamination",
+   "question": "Does the image show this: contamination on the bottle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the bottle in this image. Does it show this defect: contamination?"
+  },
+  {
+   "id": "MVTec/cable/bent_wire",
+   "question": "Does the image show this: bent wire on the cable?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: bent wire?"
+  },
+  {
+   "id": "MVTec/cable/cable_swap",
+   "question": "Does the image show this: cable swap on the cable?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: cable swap?"
+  },
+  {
+   "id": "MVTec/cable/cut_inner_insulation",
+   "question": "Does the image show this: cut inner insulation on the cable?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: cut inner insulation?"
+  },
+  {
+   "id": "MVTec/cable/cut_outer_insulation",
+   "question": "Does the image show this: cut outer insulation on the cable?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: cut outer insulation?"
+  },
+  {
+   "id": "MVTec/cable/missing_cable",
+   "question": "Does the image show this: missing cable on the cable?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: missing cable?"
+  },
+  {
+   "id": "MVTec/cable/missing_wire",
+   "question": "Does the image show this: missing wire on the cable?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: missing wire?"
+  },
+  {
+   "id": "MVTec/cable/poke_insulation",
+   "question": "Does the image show this: poke insulation on the cable?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cable in this image. Does it show this defect: poke insulation?"
+  },
+  {
+   "id": "MVTec/capsule/crack",
+   "question": "Does the image show this: crack on the capsule?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: crack?"
+  },
+  {
+   "id": "MVTec/capsule/faulty_imprint",
+   "question": "Does the image show this: faulty imprint on the capsule?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: faulty imprint?"
+  },
+  {
+   "id": "MVTec/capsule/poke",
+   "question": "Does the image show this: poke on the capsule?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: poke?"
+  },
+  {
+   "id": "MVTec/capsule/scratch",
+   "question": "Does the image show this: scratch on the capsule?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: scratch?"
+  },
+  {
+   "id": "MVTec/capsule/squeeze",
+   "question": "Does the image show this: squeeze on the capsule?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsule in this image. Does it show this defect: squeeze?"
+  },
+  {
+   "id": "MVTec/carpet/color",
+   "question": "Does the image show this: color on the carpet?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/carpet/cut",
+   "question": "Does the image show this: cut on the carpet?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: cut?"
+  },
+  {
+   "id": "MVTec/carpet/hole",
+   "question": "Does the image show this: hole on the carpet?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: hole?"
+  },
+  {
+   "id": "MVTec/carpet/metal_contamination",
+   "question": "Does the image show this: metal contamination on the carpet?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: metal contamination?"
+  },
+  {
+   "id": "MVTec/carpet/thread",
+   "question": "Does the image show this: thread on the carpet?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the carpet in this image. Does it show this defect: thread?"
+  },
+  {
+   "id": "MVTec/grid/bent",
+   "question": "Does the image show this: bent on the grid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: bent?"
+  },
+  {
+   "id": "MVTec/grid/broken",
+   "question": "Does the image show this: broken on the grid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: broken?"
+  },
+  {
+   "id": "MVTec/grid/glue",
+   "question": "Does the image show this: glue on the grid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: glue?"
+  },
+  {
+   "id": "MVTec/grid/metal_contamination",
+   "question": "Does the image show this: metal contamination on the grid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: metal contamination?"
+  },
+  {
+   "id": "MVTec/grid/thread",
+   "question": "Does the image show this: thread on the grid?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the grid in this image. Does it show this defect: thread?"
+  },
+  {
+   "id": "MVTec/hazelnut/crack",
+   "question": "Does the image show this: crack on the hazelnut?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the hazelnut in this image. Does it show this defect: crack?"
+  },
+  {
+   "id": "MVTec/hazelnut/cut",
+   "question": "Does the image show this: cut on the hazelnut?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the hazelnut in this image. Does it show this defect: cut?"
+  },
+  {
+   "id": "MVTec/hazelnut/hole",
+   "question": "Does the image show this: hole on the hazelnut?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the hazelnut in this image. Does it show this defect: hole?"
+  },
+  {
+   "id": "MVTec/hazelnut/print",
+   "question": "Does the image show this: print on the hazelnut?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the hazelnut in this image. Does it show this defect: print?"
+  },
+  {
+   "id": "MVTec/leather/color",
+   "question": "Does the image show this: color on the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/leather/cut",
+   "question": "Does the image show this: cut on the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: cut?"
+  },
+  {
+   "id": "MVTec/leather/fold",
+   "question": "Does the image show this: fold on the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: fold?"
+  },
+  {
+   "id": "MVTec/leather/glue",
+   "question": "Does the image show this: glue on the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: glue?"
+  },
+  {
+   "id": "MVTec/leather/poke",
+   "question": "Does the image show this: poke on the leather?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the leather in this image. Does it show this defect: poke?"
+  },
+  {
+   "id": "MVTec/metal_nut/bent",
+   "question": "Does the image show this: bent on the metal nut?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the metal nut in this image. Does it show this defect: bent?"
+  },
+  {
+   "id": "MVTec/metal_nut/color",
+   "question": "Does the image show this: color on the metal nut?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the metal nut in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/metal_nut/scratch",
+   "question": "Does the image show this: scratch on the metal nut?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the metal nut in this image. Does it show this defect: scratch?"
+  },
+  {
+   "id": "MVTec/pill/color",
+   "question": "Does the image show this: color on the pill?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/pill/contamination",
+   "question": "Does the image show this: contamination on the pill?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: contamination?"
+  },
+  {
+   "id": "MVTec/pill/crack",
+   "question": "Does the image show this: crack on the pill?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: crack?"
+  },
+  {
+   "id": "MVTec/pill/faulty_imprint",
+   "question": "Does the image show this: faulty imprint on the pill?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: faulty imprint?"
+  },
+  {
+   "id": "MVTec/pill/scratch",
+   "question": "Does the image show this: scratch on the pill?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pill in this image. Does it show this defect: scratch?"
+  },
+  {
+   "id": "MVTec/screw/manipulated_front",
+   "question": "Does the image show this: manipulated front on the screw?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: manipulated front?"
+  },
+  {
+   "id": "MVTec/screw/scratch_head",
+   "question": "Does the image show this: scratch head on the screw?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: scratch head?"
+  },
+  {
+   "id": "MVTec/screw/scratch_neck",
+   "question": "Does the image show this: scratch neck on the screw?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: scratch neck?"
+  },
+  {
+   "id": "MVTec/screw/thread_side",
+   "question": "Does the image show this: thread side on the screw?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: thread side?"
+  },
+  {
+   "id": "MVTec/screw/thread_top",
+   "question": "Does the image show this: thread top on the screw?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the screw in this image. Does it show this defect: thread top?"
+  },
+  {
+   "id": "MVTec/tile/crack",
+   "question": "Does the image show this: crack on the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: crack?"
+  },
+  {
+   "id": "MVTec/tile/glue_strip",
+   "question": "Does the image show this: glue strip on the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: glue strip?"
+  },
+  {
+   "id": "MVTec/tile/gray_stroke",
+   "question": "Does the image show this: gray stroke on the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: gray stroke?"
+  },
+  {
+   "id": "MVTec/tile/oil",
+   "question": "Does the image show this: oil on the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: oil?"
+  },
+  {
+   "id": "MVTec/tile/rough",
+   "question": "Does the image show this: rough on the tile?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the tile in this image. Does it show this defect: rough?"
+  },
+  {
+   "id": "MVTec/toothbrush/defective",
+   "question": "Does the image show this: defective on the toothbrush?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the toothbrush in this image. Does it show this defect: defective?"
+  },
+  {
+   "id": "MVTec/transistor/bent_lead",
+   "question": "Does the image show this: bent lead on the transistor?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the transistor in this image. Does it show this defect: bent lead?"
+  },
+  {
+   "id": "MVTec/transistor/cut_lead",
+   "question": "Does the image show this: cut lead on the transistor?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the transistor in this image. Does it show this defect: cut lead?"
+  },
+  {
+   "id": "MVTec/transistor/damaged_case",
+   "question": "Does the image show this: damaged case on the transistor?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the transistor in this image. Does it show this defect: damaged case?"
+  },
+  {
+   "id": "MVTec/transistor/misplaced",
+   "question": "Does the image show this: misplaced on the transistor?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the transistor in this image. Does it show this defect: misplaced?"
+  },
+  {
+   "id": "MVTec/wood/color",
+   "question": "Does the image show this: color on the wood?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the wood in this image. Does it show this defect: color?"
+  },
+  {
+   "id": "MVTec/wood/hole",
+   "question": "Does the image show this: hole on the wood?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the wood in this image. Does it show this defect: hole?"
+  },
+  {
+   "id": "MVTec/wood/liquid",
+   "question": "Does the image show this: liquid on the wood?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the wood in this image. Does it show this defect: liquid?"
+  },
+  {
+   "id": "MVTec/wood/scratch",
+   "question": "Does the image show this: scratch on the wood?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the wood in this image. Does it show this defect: scratch?"
+  },
+  {
+   "id": "MVTec/zipper/broken_teeth",
+   "question": "Does the image show this: broken teeth on the zipper?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: broken teeth?"
+  },
+  {
+   "id": "MVTec/zipper/fabric_border",
+   "question": "Does the image show this: fabric border on the zipper?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: fabric border?"
+  },
+  {
+   "id": "MVTec/zipper/fabric_interior",
+   "question": "Does the image show this: fabric interior on the zipper?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: fabric interior?"
+  },
+  {
+   "id": "MVTec/zipper/rough",
+   "question": "Does the image show this: rough on the zipper?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: rough?"
+  },
+  {
+   "id": "MVTec/zipper/split_teeth",
+   "question": "Does the image show this: split teeth on the zipper?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: split teeth?"
+  },
+  {
+   "id": "MVTec/zipper/squeezed_teeth",
+   "question": "Does the image show this: squeezed teeth on the zipper?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the zipper in this image. Does it show this defect: squeezed teeth?"
+  },
+  {
+   "id": "VisA/candle/bad",
+   "question": "Does the image show this: bad on the candle?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the candle in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/capsules/bad",
+   "question": "Does the image show this: bad on the capsules?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the capsules in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/cashew/bad",
+   "question": "Does the image show this: bad on the cashew?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the cashew in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/chewinggum/bad",
+   "question": "Does the image show this: bad on the chewinggum?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the chewinggum in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/fryum/bad",
+   "question": "Does the image show this: bad on the fryum?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the fryum in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/macaroni1/bad",
+   "question": "Does the image show this: bad on the macaroni1?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the macaroni1 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/macaroni2/bad",
+   "question": "Does the image show this: bad on the macaroni2?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the macaroni2 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pcb1/bad",
+   "question": "Does the image show this: bad on the pcb1?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pcb1 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pcb2/bad",
+   "question": "Does the image show this: bad on the pcb2?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pcb2 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pcb3/bad",
+   "question": "Does the image show this: bad on the pcb3?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pcb3 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pcb4/bad",
+   "question": "Does the image show this: bad on the pcb4?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pcb4 in this image. Does it show this defect: bad?"
+  },
+  {
+   "id": "VisA/pipe_fryum/bad",
+   "question": "Does the image show this: bad on the pipe fryum?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Inspect the pipe fryum in this image. Does it show this defect: bad?"
+  }
+ ],
+ "severity": {
+  "GoodsAD/cigarette_box": {
+   "GoodsAD/cigarette_box/opened": 1
+  },
+  "GoodsAD/drink_bottle": {
+   "GoodsAD/drink_bottle/cap_half_open": 1,
+   "GoodsAD/drink_bottle/cap_open": 1,
+   "GoodsAD/drink_bottle/surface_damage": 1
+  },
+  "GoodsAD/drink_can": {
+   "GoodsAD/drink_can/deformation": 1,
+   "GoodsAD/drink_can/straw_missing": 1,
+   "GoodsAD/drink_can/surface_damage": 1
+  },
+  "GoodsAD/food_bottle": {
+   "GoodsAD/food_bottle/deformation": 1,
+   "GoodsAD/food_bottle/opened": 1,
+   "GoodsAD/food_bottle/surface_damage": 1
+  },
+  "GoodsAD/food_box": {
+   "GoodsAD/food_box/deformation": 1,
+   "GoodsAD/food_box/opened": 1,
+   "GoodsAD/food_box/surface_damage": 1
+  },
+  "GoodsAD/food_package": {
+   "GoodsAD/food_package/broken": 1,
+   "GoodsAD/food_package/surface_anomaly": 1
+  },
+  "MVTec-LOCO/breakfast_box": {
+   "MVTec-LOCO/breakfast_box/logical_anomalies": 1,
+   "MVTec-LOCO/breakfast_box/structural_anomalies": 1
+  },
+  "MVTec-LOCO/juice_bottle": {
+   "MVTec-LOCO/juice_bottle/logical_anomalies": 1,
+   "MVTec-LOCO/juice_bottle/structural_anomalies": 1
+  },
+  "MVTec-LOCO/pushpins": {
+   "MVTec-LOCO/pushpins/logical_anomalies": 1,
+   "MVTec-LOCO/pushpins/structural_anomalies": 1
+  },
+  "MVTec-LOCO/screw_bag": {
+   "MVTec-LOCO/screw_bag/logical_anomalies": 1,
+   "MVTec-LOCO/screw_bag/structural_anomalies": 1
+  },
+  "MVTec-LOCO/splicing_connectors": {
+   "MVTec-LOCO/splicing_connectors/logical_anomalies": 1,
+   "MVTec-LOCO/splicing_connectors/structural_anomalies": 1
+  },
+  "MVTec/bottle": {
+   "MVTec/bottle/broken_large": 1,
+   "MVTec/bottle/broken_small": 1,
+   "MVTec/bottle/contamination": 1
+  },
+  "MVTec/cable": {
+   "MVTec/cable/bent_wire": 1,
+   "MVTec/cable/cable_swap": 1,
+   "MVTec/cable/cut_inner_insulation": 1,
+   "MVTec/cable/cut_outer_insulation": 1,
+   "MVTec/cable/missing_cable": 1,
+   "MVTec/cable/missing_wire": 1,
+   "MVTec/cable/poke_insulation": 1
+  },
+  "MVTec/capsule": {
+   "MVTec/capsule/crack": 1,
+   "MVTec/capsule/faulty_imprint": 1,
+   "MVTec/capsule/poke": 1,
+   "MVTec/capsule/scratch": 1,
+   "MVTec/capsule/squeeze": 1
+  },
+  "MVTec/carpet": {
+   "MVTec/carpet/color": 1,
+   "MVTec/carpet/cut": 1,
+   "MVTec/carpet/hole": 1,
+   "MVTec/carpet/metal_contamination": 1,
+   "MVTec/carpet/thread": 1
+  },
+  "MVTec/grid": {
+   "MVTec/grid/bent": 1,
+   "MVTec/grid/broken": 1,
+   "MVTec/grid/glue": 1,
+   "MVTec/grid/metal_contamination": 1,
+   "MVTec/grid/thread": 1
+  },
+  "MVTec/hazelnut": {
+   "MVTec/hazelnut/crack": 1,
+   "MVTec/hazelnut/cut": 1,
+   "MVTec/hazelnut/hole": 1,
+   "MVTec/hazelnut/print": 1
+  },
+  "MVTec/leather": {
+   "MVTec/leather/color": 1,
+   "MVTec/leather/cut": 1,
+   "MVTec/leather/fold": 1,
+   "MVTec/leather/glue": 1,
+   "MVTec/leather/poke": 1
+  },
+  "MVTec/metal_nut": {
+   "MVTec/metal_nut/bent": 1,
+   "MVTec/metal_nut/color": 1,
+   "MVTec/metal_nut/scratch": 1
+  },
+  "MVTec/pill": {
+   "MVTec/pill/color": 1,
+   "MVTec/pill/contamination": 1,
+   "MVTec/pill/crack": 1,
+   "MVTec/pill/faulty_imprint": 1,
+   "MVTec/pill/scratch": 1
+  },
+  "MVTec/screw": {
+   "MVTec/screw/manipulated_front": 1,
+   "MVTec/screw/scratch_head": 1,
+   "MVTec/screw/scratch_neck": 1,
+   "MVTec/screw/thread_side": 1,
+   "MVTec/screw/thread_top": 1
+  },
+  "MVTec/tile": {
+   "MVTec/tile/crack": 1,
+   "MVTec/tile/glue_strip": 1,
+   "MVTec/tile/gray_stroke": 1,
+   "MVTec/tile/oil": 1,
+   "MVTec/tile/rough": 1
+  },
+  "MVTec/toothbrush": {
+   "MVTec/toothbrush/defective": 1
+  },
+  "MVTec/transistor": {
+   "MVTec/transistor/bent_lead": 1,
+   "MVTec/transistor/cut_lead": 1,
+   "MVTec/transistor/damaged_case": 1,
+   "MVTec/transistor/misplaced": 1
+  },
+  "MVTec/wood": {
+   "MVTec/wood/color": 1,
+   "MVTec/wood/hole": 1,
+   "MVTec/wood/liquid": 1,
+   "MVTec/wood/scratch": 1
+  },
+  "MVTec/zipper": {
+   "MVTec/zipper/broken_teeth": 1,
+   "MVTec/zipper/fabric_border": 1,
+   "MVTec/zipper/fabric_interior": 1,
+   "MVTec/zipper/rough": 1,
+   "MVTec/zipper/split_teeth": 1,
+   "MVTec/zipper/squeezed_teeth": 1
+  },
+  "VisA/candle": {
+   "VisA/candle/bad": 1
+  },
+  "VisA/capsules": {
+   "VisA/capsules/bad": 1
+  },
+  "VisA/cashew": {
+   "VisA/cashew/bad": 1
+  },
+  "VisA/chewinggum": {
+   "VisA/chewinggum/bad": 1
+  },
+  "VisA/fryum": {
+   "VisA/fryum/bad": 1
+  },
+  "VisA/macaroni1": {
+   "VisA/macaroni1/bad": 1
+  },
+  "VisA/macaroni2": {
+   "VisA/macaroni2/bad": 1
+  },
+  "VisA/pcb1": {
+   "VisA/pcb1/bad": 1
+  },
+  "VisA/pcb2": {
+   "VisA/pcb2/bad": 1
+  },
+  "VisA/pcb3": {
+   "VisA/pcb3/bad": 1
+  },
+  "VisA/pcb4": {
+   "VisA/pcb4/bad": 1
+  },
+  "VisA/pipe_fryum": {
+   "VisA/pipe_fryum/bad": 1
+  }
+ },
+ "verdict_questions": {
+  "GoodsAD/cigarette_box": "Does the image show this: whether the cigarette box has any defect?",
+  "GoodsAD/drink_bottle": "Does the image show this: whether the drink bottle has any defect?",
+  "GoodsAD/drink_can": "Does the image show this: whether the drink can has any defect?",
+  "GoodsAD/food_bottle": "Does the image show this: whether the food bottle has any defect?",
+  "GoodsAD/food_box": "Does the image show this: whether the food box has any defect?",
+  "GoodsAD/food_package": "Does the image show this: whether the food package has any defect?",
+  "MVTec-LOCO/breakfast_box": "Does the image show this: whether the breakfast box has any defect?",
+  "MVTec-LOCO/juice_bottle": "Does the image show this: whether the juice bottle has any defect?",
+  "MVTec-LOCO/pushpins": "Does the image show this: whether the pushpins has any defect?",
+  "MVTec-LOCO/screw_bag": "Does the image show this: whether the screw bag has any defect?",
+  "MVTec-LOCO/splicing_connectors": "Does the image show this: whether the splicing connectors has any defect?",
+  "MVTec/bottle": "Does the image show this: whether the bottle has any defect?",
+  "MVTec/cable": "Does the image show this: whether the cable has any defect?",
+  "MVTec/capsule": "Does the image show this: whether the capsule has any defect?",
+  "MVTec/carpet": "Does the image show this: whether the carpet has any defect?",
+  "MVTec/grid": "Does the image show this: whether the grid has any defect?",
+  "MVTec/hazelnut": "Does the image show this: whether the hazelnut has any defect?",
+  "MVTec/leather": "Does the image show this: whether the leather has any defect?",
+  "MVTec/metal_nut": "Does the image show this: whether the metal nut has any defect?",
+  "MVTec/pill": "Does the image show this: whether the pill has any defect?",
+  "MVTec/screw": "Does the image show this: whether the screw has any defect?",
+  "MVTec/tile": "Does the image show this: whether the tile has any defect?",
+  "MVTec/toothbrush": "Does the image show this: whether the toothbrush has any defect?",
+  "MVTec/transistor": "Does the image show this: whether the transistor has any defect?",
+  "MVTec/wood": "Does the image show this: whether the wood has any defect?",
+  "MVTec/zipper": "Does the image show this: whether the zipper has any defect?",
+  "VisA/candle": "Does the image show this: whether the candle has any defect?",
+  "VisA/capsules": "Does the image show this: whether the capsules has any defect?",
+  "VisA/cashew": "Does the image show this: whether the cashew has any defect?",
+  "VisA/chewinggum": "Does the image show this: whether the chewinggum has any defect?",
+  "VisA/fryum": "Does the image show this: whether the fryum has any defect?",
+  "VisA/macaroni1": "Does the image show this: whether the macaroni1 has any defect?",
+  "VisA/macaroni2": "Does the image show this: whether the macaroni2 has any defect?",
+  "VisA/pcb1": "Does the image show this: whether the pcb1 has any defect?",
+  "VisA/pcb2": "Does the image show this: whether the pcb2 has any defect?",
+  "VisA/pcb3": "Does the image show this: whether the pcb3 has any defect?",
+  "VisA/pcb4": "Does the image show this: whether the pcb4 has any defect?",
+  "VisA/pipe_fryum": "Does the image show this: whether the pipe fryum has any defect?"
+ },
+ "instruction": "Answer the question about this image with a single word: Yes or No."
+}

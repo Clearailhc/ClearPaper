@@ -1,0 +1,29 @@
+\section{Overexposure}
+\label{sec:theory}
+
+\paragraph{Setting.} An image $x$ shows a latent \emph{state} $s\in\{0,1\}^J$ of atomic facts (smoking, no gloves, open flame, \dots). A \emph{rule} $S$ maps the state to a verdict $y=\pi_S(s)\in\{0,\dots,K-1\}$. Rules are monotone in $s$; the two families we study are the ordinal ``most severe fact'' rule $y=\max_j S_j s_j$ with a severity table $S$, and the ``any fact'' rule $y=\bigvee_{j\in S}s_j$. Training labels come from one rule $S_0$; at deployment the rule is drawn from a family $\mathcal Q$ of revisions. Some facts may also be annotated; an annotation reports a present fact with probability $c_j$ and an absent one with probability $\delta$.
+
+\begin{theorem}[One state for all rules]\label{thm:suff}
+For every $S\in\operatorname{supp}\mathcal Q$, the Bayes decision is $\arg\max_y\sum_s P(s\mid x)\,\mathbb 1[\pi_S(s)=y]$. The fact posterior $P(s\mid x)$ is therefore optimal for all rules at once, whereas the verdict posterior learned under $S_0$ is its lossy projection. If $\mathcal Q$ contains every monotone table, any statistic that is sufficient for all of $\mathcal Q$ determines the marginals $P(s_j\mid x)$.
+\end{theorem}
+
+\noindent A model that is to survive rule edits must therefore estimate facts, not verdicts. The next question is how much a verdict can teach about each fact.
+
+\begin{definition}[Exposure]
+The exposure of fact $j$ in image $x$ under rule $S$ is $v_j(x;S)=P\big(\pi_S(s)\neq\pi_S(s\oplus e_j)\mid x\big)$, the probability that flipping $s_j$ changes the verdict. A cell $(x,j)$ is \emph{clipped} under $S$ if $v_j(x;S)=0$ and \emph{visible} otherwise. The deployment exposure is $v^{\mathcal Q}_j(x)=\mathbb E_{S\sim\mathcal Q}\,v_j(x;S)$.
+\end{definition}
+
+\noindent In \cref{fig:teaser}, smoking is level one, so every other fact---open flame included---is clipped: switching it on or off leaves the verdict at level one.
+
+\begin{theorem}[Exposure gap]\label{thm:gap}
+Assume the facts are conditionally independent given the image. Then (a) $I(Y;S_j\mid S_{-j},x)=v_j(x;S_0)\,H(S_j\mid x)$; and (b) for any fact estimate $q$, the excess error under a rule $S\sim\mathcal Q$ is at most $\sum_j\mathbb E_x\big[v_j(x;S)\,\lvert q_j(x)-P(s_j{=}1\mid x)\rvert\big]$.
+\end{theorem}
+
+\noindent Part (a) says that a verdict is informative about a fact exactly when the fact is pivotal, so clipped cells are unidentifiable from verdicts, whatever the loss or the optimiser. Part (b) says that errors on those cells are harmless under $S_0$---they carry weight $v_j(x;S_0)=0$---and harmful under any rule that exposes them. Overexposure is thus invisible in-distribution and surfaces after an edit. It also predicts which edits are dangerous: \emph{relaxing} a fact (lowering its severity or removing it from the rule) exposes the cells it used to clip; tightening a rule does not. Proofs are in \cref{app:proofs}.
+
+\begin{theorem}[Minimum-information completion]\label{thm:mic}
+Among fact estimates consistent with the observations, the minimax choice relative to a reference model $q_0$ on the cells the data does not identify is the I-projection~\cite{csiszar1975}
+$q^\star=\arg\min_q\mathrm{KL}(q\,\Vert\,q_0)$ subject to the observation model's push-forward of $q$ matching the data. On uninformed cells, $q^\star$ is never worse than $q_0$.
+\end{theorem}
+
+\noindent If $\mathcal Q=\{S_0\}$ and capacity is unlimited, composing $q^\star$ with $S_0$ equals direct verdict prediction; any in-distribution gap to a verdict-trained model is estimation error of the state, not a cost of the decomposition. \Cref{sec:exp-cost} measures how this gap depends on how completely the facts are annotated.

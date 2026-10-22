@@ -1,0 +1,12 @@
+{
+  "model": "/nas/home/ab/jev/models/Qwen/Qwen3-VL-32B-Thinking",
+  "n": 50,
+  "branches": 15,
+  "thinking": {
+    "median_s": 11.393124210997485,
+    "mean_s": 14.657690089618555,
+    "p95_s": 33.430046486300114,
+    "median_out_tokens": 487.0,
+    "mean_out_tokens": 635.96
+  }
+}

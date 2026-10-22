@@ -1,0 +1,23 @@
+{
+  "_doc": [
+    "Benign-explanation (counter) primitives for InspecSafe-V1 (direction 4, log #29).",
+    "They are asked alongside the hazard primitives and never raise the level themselves (severity 0);",
+    "`pairs` lists which hazard primitives each one may inhibit: p_j <- p_j * (1 - alpha_j * p_c(j))."
+  ],
+  "levels": {"risk_index_to_name": ["no abnormalities observed", "Level three", "Level two", "Level one"]},
+  "industries": ["oil_gas", "coal_conveyor", "tunnel", "power", "metallurgy"],
+  "primitives": [
+    {"id": "benign_floor_reflection",
+     "question": "Is any bright or shiny area on the floor in this image only a normal reflection of light on a smooth floor, rather than real water or oil on the ground?"},
+    {"id": "benign_process_smoke",
+     "question": "Is any smoke or vapor visible in this image only normal process steam or exhaust (for example from a slag pot, furnace, cooling tower or industrial pipe), rather than smoke from a fire?"},
+    {"id": "benign_red_equipment",
+     "question": "Are the red objects in this image only normal fire-safety equipment, such as a closed hydrant cabinet or a fire extinguisher?"}
+  ],
+  "pairs": {
+    "benign_floor_reflection": ["water_pooling", "oil_accumulation", "oil_leakage"],
+    "benign_process_smoke": ["smoke"],
+    "benign_red_equipment": ["open_flame", "cabinet_door_open"]
+  },
+  "severity": {"oil_gas": {}, "coal_conveyor": {}, "tunnel": {}, "power": {}, "metallurgy": {}}
+}

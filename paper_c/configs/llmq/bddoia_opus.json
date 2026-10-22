@@ -1,0 +1,79 @@
+{
+ "_doc": [
+  "v2 question source = opus: Claude Opus 5.5, same prompts, answered by hand without images or results (research_log #131)",
+  "facts missing in the output: []",
+  "V44: BDD-OIA stop decision, atoms = 6 stop reasons, OR policy (research_log #108)"
+ ],
+ "levels": {
+  "risk_index_to_name": [
+   "go",
+   "stop"
+  ],
+  "risk_index_to_roman": [
+   "0",
+   "1"
+  ]
+ },
+ "industries": [
+  "driving"
+ ],
+ "industry_prefix_rules": [],
+ "primitives": [
+  {
+   "id": "obstacle_car",
+   "question": "Is there a car or other vehicle in the way of the ego car on the road ahead?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Look at the road ahead of the ego vehicle. Is there a car or other vehicle in the way that requires it to stop or slow down?"
+  },
+  {
+   "id": "traffic_sign",
+   "question": "Is there a traffic sign ahead telling the car to stop or yield, such as a stop sign or yield sign?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Look at the road ahead of the ego vehicle. Is there a traffic sign telling it to stop or yield that requires it to stop or slow down?"
+  },
+  {
+   "id": "obstacle_rider",
+   "question": "Is there a cyclist or motorcyclist in the way of the ego car on the road ahead?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Look at the road ahead of the ego vehicle. Is there a cyclist or motorcyclist in the way that requires it to stop or slow down?"
+  },
+  {
+   "id": "obstacle_person",
+   "question": "Is there a pedestrian in the way of the ego car on the road ahead?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Look at the road ahead of the ego vehicle. Is there a pedestrian in the way that requires it to stop or slow down?"
+  },
+  {
+   "id": "traffic_light",
+   "question": "Is there a red traffic light facing the ego car?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Look at the road ahead of the ego vehicle. Is there a red traffic light that requires it to stop or slow down?"
+  },
+  {
+   "id": "obstacle_others",
+   "question": "Is there an obstacle on the road ahead that is not a vehicle, pedestrian or rider, such as debris or a barrier?",
+   "pos": [],
+   "neg": [],
+   "question_source": "Look at the road ahead of the ego vehicle. Is there another obstacle on the road that requires it to stop or slow down?"
+  }
+ ],
+ "severity": {
+  "driving": {
+   "obstacle_car": 1,
+   "traffic_sign": 1,
+   "obstacle_rider": 1,
+   "obstacle_person": 1,
+   "traffic_light": 1,
+   "obstacle_others": 1
+  }
+ },
+ "verdict_questions": {
+  "driving": "Should the ego car stop or slow down in this situation?"
+ },
+ "instruction": "Answer the question about this image with a single word: Yes or No."
+}

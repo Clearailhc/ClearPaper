@@ -1,0 +1,46 @@
+% LUX: Recovering Overexposed Visual Facts for Rule-Editable Decisions
+% Built on the official CVPR author kit (https://github.com/cvpr-org/author-kit, main branch of 2026-05-28).
+% CVPR 2027: submission Nov 16 2026 AoE (registration Nov 10, supplementary Nov 23), OpenReview.
+% Limit: 8 pages including figures and tables; references do not count. Replace cvpr.sty with the 2027 kit when released.
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+% \usepackage{cvpr}              % camera-ready
+\usepackage[review]{cvpr}      % review version (anonymous, line numbers)
+% \usepackage[pagenumbers]{cvpr} % arXiv
+
+\input{preamble}
+
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+
+\def\paperID{*****} % enter the OpenReview paper ID
+\def\confName{CVPR}
+\def\confYear{2027}
+
+\title{\lux: Recovering Overexposed Visual Facts for Rule-Editable Decisions}
+
+\author{Anonymous CVPR submission\\ Paper ID \paperID}
+
+\begin{document}
+\maketitle
+\input{fig/teaser}
+\input{sec/0_abstract}
+\input{sec/1_intro}
+\input{sec/2_related}
+\input{sec/3_theory}
+\input{sec/4_method}
+\input{sec/5_experiments}
+\input{sec/6_discussion}
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{refs}
+}
+
+% Supplementary material: compiled with the paper, split off before submission (or submit as a separate PDF).
+\clearpage
+\setcounter{page}{1}
+\maketitlesupplementary
+\input{sec/X_suppl}
+
+\end{document}

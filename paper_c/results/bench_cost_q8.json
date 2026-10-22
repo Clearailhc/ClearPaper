@@ -1,0 +1,21 @@
+{
+  "model": "/nas/home/ab/jev/models/Qwen/Qwen3-VL-8B-Instruct",
+  "n_images": 200,
+  "branches": 15,
+  "direct": {
+    "seconds": 39.593074560165405,
+    "s_per_image": 0.19796537280082702
+  },
+  "fanout_all": {
+    "seconds": 57.850621938705444,
+    "s_per_image": 0.28925310969352724
+  },
+  "fanout_grouped": {
+    "seconds": 60.92524600028992,
+    "s_per_image": 0.30462623000144956
+  },
+  "fanout_nocache": {
+    "seconds": 322.7936339378357,
+    "s_per_image": 1.6139681696891786
+  }
+}

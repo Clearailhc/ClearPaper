@@ -1,0 +1,362 @@
+{
+ "_doc": [
+  "V49: questions generated from the fact names of the official criteria table by one template (research_log #129)",
+  "template: Does the image show this safety hazard: {name}?",
+  "Hazard primitives and per-industry severity for InspecSafe-V1.",
+  "Severity is a risk index: 3 = Level one (critical), 2 = Level two, 1 = Level three, 0 = not a hazard in that industry.",
+  "Source: the 'Assessment Criteria (by industry)' table in the official InspecSafe-V1 evaluation prompt (model_api_generate_results.py).",
+  "Primitives absent from an industry's row default to 0; scene-level leak terms in the aggregator absorb hazards outside this list.",
+  "industry_prefix_rules map the inspection-point folder prefix to an industry; scripts/build_index.py lists unmapped prefixes - add them here."
+ ],
+ "levels": {
+  "risk_index_to_name": [
+   "no abnormalities observed",
+   "Level three",
+   "Level two",
+   "Level one"
+  ],
+  "risk_index_to_roman": [
+   "IV",
+   "III",
+   "II",
+   "I"
+  ]
+ },
+ "industries": [
+  "oil_gas",
+  "coal_conveyor",
+  "tunnel",
+  "power",
+  "metallurgy"
+ ],
+ "industry_prefix_rules": [
+  {
+   "contains": "coal",
+   "industry": "coal_conveyor"
+  },
+  {
+   "contains": "tunnel",
+   "industry": "tunnel"
+  },
+  {
+   "contains": "power",
+   "industry": "power"
+  },
+  {
+   "contains": "substation",
+   "industry": "power"
+  },
+  {
+   "contains": "sinter",
+   "industry": "metallurgy"
+  },
+  {
+   "contains": "metal",
+   "industry": "metallurgy"
+  },
+  {
+   "contains": "steel",
+   "industry": "metallurgy"
+  },
+  {
+   "contains": "oil",
+   "industry": "oil_gas"
+  },
+  {
+   "contains": "gas",
+   "industry": "oil_gas"
+  },
+  {
+   "contains": "chem",
+   "industry": "oil_gas"
+  },
+  {
+   "contains": "petro",
+   "industry": "oil_gas"
+  }
+ ],
+ "primitives": [
+  {
+   "id": "open_flame",
+   "question": "Does the image show this safety hazard: open flame?",
+   "pos": [
+    "open flame",
+    "\\bflames?\\b",
+    "\\bfire\\b(?!\\s*(cabinet|extinguisher|hydrant|door|hose|alarm|box|fighting|protection|pipe|sprinkler|escape|exit|safety|equipment|station|detector))",
+    "burning"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is there an open flame or fire visible in the image?"
+  },
+  {
+   "id": "smoke",
+   "question": "Does the image show this safety hazard: smoke?",
+   "pos": [
+    "\\bsmoke\\b(?!\\s*detector)",
+    "smoky"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is there smoke that indicates a fire or an abnormal emission? Ignore normal process smoke or steam, such as from a slag pot or furnace."
+  },
+  {
+   "id": "personnel_collapse",
+   "question": "Does the image show this safety hazard: personnel collapse?",
+   "pos": [
+    "collaps",
+    "lying on the (ground|floor)",
+    "fallen (person|worker)",
+    "(person|worker|personnel) (has )?fallen",
+    "(person|worker|personnel|someone)[^.;]{0,15}\\bon the (ground|floor)",
+    "\\bfallen\\b"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is there a person who has collapsed, fallen, or is lying on the ground?"
+  },
+  {
+   "id": "smoking",
+   "question": "Does the image show this safety hazard: smoking?",
+   "pos": [
+    "\\bsmoking\\b",
+    "cigarette"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is there a person smoking (holding a lit cigarette) in the image?"
+  },
+  {
+   "id": "oil_leakage",
+   "question": "Does the image show this safety hazard: oil leakage?",
+   "pos": [
+    "oil leak",
+    "leaking oil",
+    "oil (is )?dripping",
+    "oil spray",
+    "oil spill"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is oil actively leaking, dripping, or spraying from equipment or pipes?"
+  },
+  {
+   "id": "no_hard_hat",
+   "question": "Does the image show this safety hazard: no hard hat?",
+   "pos": [
+    "(?:\\b(?:not|never|n't)\\s+(?:be\\s+)?(?:wearing|wear|worn|equipped with)|\\bwithout|\\black(?:ing|s)?|\\bno)\\b(?:(?!\\bbut\\b|\\bwhile\\b|\\balthough\\b|\\bhowever\\b)[^.;]){0,60}?\\b(?:hard hats?|safety helmets?|helmets?|safety hats?)",
+    "\\b(?:hard hats?|safety helmets?|helmets?|safety hats?)\\s+(?:is |are )?(?:missing|absent|not worn)"
+   ],
+   "neg": [
+    "\\b(?:wearing|wears|with)\\b(?:(?!\\bbut\\b|\\bwhile\\b|\\balthough\\b|\\bhowever\\b)[^.;]){0,60}?\\b(?:hard hats?|safety helmets?|helmets?|safety hats?)"
+   ],
+   "negatable": false,
+   "question_hand_written": "Is there a person who is not wearing a hard hat (safety helmet)?"
+  },
+  {
+   "id": "no_gloves",
+   "question": "Does the image show this safety hazard: no gloves?",
+   "pos": [
+    "(?:\\b(?:not|never|n't)\\s+(?:be\\s+)?(?:wearing|wear|worn|equipped with)|\\bwithout|\\black(?:ing|s)?|\\bno)\\b(?:(?!\\bbut\\b|\\bwhile\\b|\\balthough\\b|\\bhowever\\b)[^.;]){0,60}?\\b(?:protective |work )?gloves?",
+    "\\b(?:protective |work )?gloves?\\s+(?:is |are )?(?:missing|absent|not worn)"
+   ],
+   "neg": [
+    "\\b(?:wearing|wears|with)\\b(?:(?!\\bbut\\b|\\bwhile\\b|\\balthough\\b|\\bhowever\\b)[^.;]){0,60}?\\b(?:protective |work )?gloves?"
+   ],
+   "negatable": false,
+   "question_hand_written": "Is there a person who is not wearing protective gloves?"
+  },
+  {
+   "id": "no_mask",
+   "question": "Does the image show this safety hazard: no mask?",
+   "pos": [
+    "(?:\\b(?:not|never|n't)\\s+(?:be\\s+)?(?:wearing|wear|worn|equipped with)|\\bwithout|\\black(?:ing|s)?|\\bno)\\b(?:(?!\\bbut\\b|\\bwhile\\b|\\balthough\\b|\\bhowever\\b)[^.;]){0,60}?\\b(?:face |dust )?masks?",
+    "\\b(?:face |dust )?masks?\\s+(?:is |are )?(?:missing|absent|not worn)"
+   ],
+   "neg": [
+    "\\b(?:wearing|wears|with)\\b(?:(?!\\bbut\\b|\\bwhile\\b|\\balthough\\b|\\bhowever\\b)[^.;]){0,60}?\\b(?:face |dust )?masks?"
+   ],
+   "negatable": false,
+   "question_hand_written": "Is there a person who is not wearing a face mask?"
+  },
+  {
+   "id": "mobile_phone",
+   "question": "Does the image show this safety hazard: using mobile phone?",
+   "pos": [
+    "(mobile|cell)? ?phone",
+    "smartphone"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is there a person using a mobile phone?"
+  },
+  {
+   "id": "water_pooling",
+   "question": "Does the image show this safety hazard: water pooling?",
+   "pos": [
+    "water pool",
+    "pooling",
+    "puddle",
+    "standing water",
+    "accumulated water",
+    "water accumulation",
+    "liquid accumulation",
+    "accumulat\\w* (of )?(water|liquid)"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is there pooled or standing water on the floor or ground?"
+  },
+  {
+   "id": "oil_accumulation",
+   "question": "Does the image show this safety hazard: oil accumulation?",
+   "pos": [
+    "oil accumulation",
+    "accumulated oil",
+    "oil stain",
+    "oil (puddle|pool)",
+    "oily"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is there accumulated oil or an oil stain on the floor or equipment?"
+  },
+  {
+   "id": "foreign_object_light",
+   "question": "Does the image show this safety hazard: foreign objects (foam, plastic bags, plastic bottles, paper)?",
+   "pos": [
+    "plastic bag",
+    "plastic bottle",
+    "\\bbottles?\\b",
+    "\\bfoam\\b",
+    "\\bpaper\\b",
+    "debris",
+    "foreign object",
+    "litter",
+    "garbage",
+    "trash",
+    "\\bbags?\\b"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Are there foreign objects such as plastic bags, plastic bottles, foam, or paper lying around?"
+  },
+  {
+   "id": "foreign_object_hard",
+   "question": "Does the image show this safety hazard: foreign objects (wood, metal)?",
+   "pos": [
+    "\\bwood(en)? (piece|plank|block|board)s?",
+    "\\bwood\\b",
+    "metal (piece|object|scrap|rod|bar|debris)s?",
+    "scrap metal"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Are there foreign objects such as pieces of wood or metal lying where they should not be?"
+  },
+  {
+   "id": "cabinet_door_open",
+   "question": "Does the image show this safety hazard: cabinet door open?",
+   "pos": [
+    "cabinet door (is |left )?open",
+    "open cabinet",
+    "door of the cabinet (is )?open",
+    "cabinet door[^.;]{0,25}\\bopen",
+    "\\bdoor[^.;]{0,20}\\b(abnormally )?open(ed)?\\b"
+   ],
+   "neg": [
+    "cabinet door (is |are )?(closed|shut)"
+   ],
+   "negatable": true,
+   "question_hand_written": "Is there an electrical or equipment cabinet door left open?"
+  },
+  {
+   "id": "nonmotor_vehicle",
+   "question": "Does the image show this safety hazard: non-motorized vehicles in fast lane?",
+   "pos": [
+    "bicycle",
+    "\\bbike\\b",
+    "tricycle",
+    "non-motori[sz]ed vehicle",
+    "electric scooter"
+   ],
+   "neg": [],
+   "negatable": true,
+   "question_hand_written": "Is there a non-motorized vehicle (such as a bicycle or tricycle) in a vehicle lane?"
+  }
+ ],
+ "severity": {
+  "oil_gas": {
+   "open_flame": 3,
+   "smoke": 3,
+   "no_hard_hat": 3,
+   "no_gloves": 3,
+   "no_mask": 3,
+   "smoking": 3,
+   "personnel_collapse": 3,
+   "oil_leakage": 3,
+   "water_pooling": 2,
+   "mobile_phone": 2,
+   "foreign_object_light": 1,
+   "foreign_object_hard": 1
+  },
+  "coal_conveyor": {
+   "open_flame": 3,
+   "smoke": 3,
+   "no_hard_hat": 3,
+   "smoking": 3,
+   "personnel_collapse": 3,
+   "mobile_phone": 2,
+   "no_gloves": 2,
+   "no_mask": 2,
+   "foreign_object_light": 2,
+   "foreign_object_hard": 2,
+   "water_pooling": 1
+  },
+  "tunnel": {
+   "open_flame": 3,
+   "smoke": 3,
+   "nonmotor_vehicle": 3,
+   "foreign_object_hard": 3,
+   "personnel_collapse": 3,
+   "foreign_object_light": 2,
+   "no_hard_hat": 2,
+   "cabinet_door_open": 2,
+   "water_pooling": 1,
+   "oil_accumulation": 1,
+   "mobile_phone": 1,
+   "no_gloves": 1,
+   "no_mask": 1,
+   "smoking": 1
+  },
+  "power": {
+   "open_flame": 3,
+   "smoke": 3,
+   "smoking": 3,
+   "personnel_collapse": 3,
+   "water_pooling": 2,
+   "oil_accumulation": 2,
+   "mobile_phone": 2,
+   "foreign_object_light": 2,
+   "foreign_object_hard": 2,
+   "no_hard_hat": 2,
+   "no_gloves": 2,
+   "cabinet_door_open": 2,
+   "no_mask": 1
+  },
+  "metallurgy": {
+   "open_flame": 3,
+   "smoke": 3,
+   "no_hard_hat": 3,
+   "personnel_collapse": 3,
+   "no_gloves": 2,
+   "no_mask": 2,
+   "smoking": 2,
+   "water_pooling": 1,
+   "oil_accumulation": 1,
+   "mobile_phone": 1,
+   "foreign_object_light": 1,
+   "foreign_object_hard": 1
+  }
+ }
+}

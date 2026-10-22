@@ -1,0 +1,37 @@
+\section{\lux}
+\label{sec:method}
+
+\FIG{Figure 2 (method overview). Left: one image prefill shared by $J$ fact questions; each question returns $z_j=\log P(\text{Yes})-\log P(\text{No})$ and a calibrated $q_j$. Middle: an editable severity table composes the verdict. Right, training: the verdict and the fact annotations are scored through the rule; random tables weight the annotations that matter under other rules; facts the data does not inform are pulled to the base model. Bottom: a rule edit changes one table entry; a new fact adds one question and one column.}
+
+\Cref{thm:suff} says what to learn: the state of the scene, not the verdict of one rule. \lux turns this into three parts---a reader, a composer and a training objective---each of which follows from \cref{sec:theory}.
+
+\subsection{Reading the state in one pass}
+\label{sec:method-read}
+Every fact $j$ is one short yes/no question, written once per fact for InspecSafe and generated from the fact name by a template for MMAD and BDD-OIA (\eg ``Is there a person smoking (holding a lit cigarette) in the image?''); rewording the questions changes accuracy by at most 1.5 points (\cref{sec:exp-more}). We encode the image and the instruction once and run the $J$ question suffixes as one batch on the shared key-value cache. The first-token logits give $z_j=\log P(\text{Yes})-\log P(\text{No})$. A query therefore costs as much as asking for the verdict directly: 0.30\,s against 0.29\,s for Qwen3-VL-8B (\cref{sec:exp-more}). Fact probabilities are $q_j=\sigma(z_j/T+b_j)$ with a shared temperature $T$ and a per-fact bias $b_j$; for an untrained model the logits are first standardised by their median and spread on hazard-free validation images, which needs no positive examples.
+
+\subsection{Composing and editing the verdict}
+A rule is a severity table $S$ with one row per site or industry. The verdict distribution is the ordinal noisy-OR
+\begin{equation}
+P(y\ge k\mid x)=1-(1-\lambda_k)\prod_{j:\,S_j\ge k}(1-q_j),
+\label{eq:compose}
+\end{equation}
+with small leaks $\lambda_k$; the ``any fact'' rule is the case $K=2$. A rule edit changes table entries; a new fact adds one question and one column. Nothing is retrained, and every verdict comes with the facts that produced it.
+
+\subsection{Training: the state for a family of rules}
+\label{sec:method-train}
+\Cref{thm:mic} turns into one objective. Its dual is
+\begin{equation}
+\begin{aligned}
+\mathcal L={}&-\log P(y,m\mid q;S_0,c)\;-\;\alpha\,\mathbb E_{S\sim\mathcal Q}\log P\big(T_S(m)\mid q;S\big)\\
+&+\;\beta\textstyle\sum_{j\ \text{asked}}\mathrm{KL}(q_j\,\Vert\,q_{0,j}).
+\end{aligned}
+\label{eq:obj}
+\end{equation}
+
+\paragraph{Score what is observed, through the rule.} The first term is the joint log-likelihood of the verdict $y$ and the fact annotations $m$, computed in closed form in $O(JK)$ through \cref{eq:compose} and the annotation model: a present fact is written down with probability $c_j$, an absent one with probability $\delta$, and verdict labels are noisy with rate $\varepsilon$. Unlike fact supervision with ``unlabelled = absent'', a missing annotation is evidence weighted by $1-c_j$, not a negative label.
+
+\paragraph{Weight what other rules will need.} The second term samples tables $S$ from $\mathcal Q$ (each entry re-drawn with probability $\rho$) and scores the annotation statistic $T_S(m)$ under them, so that facts which are clipped under $S_0$ but visible under other rules still receive gradient.
+
+\paragraph{Keep what the data cannot see.} The third term pulls every asked fact towards the base model $q_0$. Where the data is informative it is dominated; where it is silent---the clipped cells of \cref{thm:gap}---it keeps the base model's reading instead of letting it drift with the verdict.
+
+\paragraph{Two identifiability details.} (i) $q$ depends on $z$ only through $z/T$, so $(z,T)\mapsto(\kappa z,\kappa T)$ is a free gauge that the prior term cannot constrain; we fix $T$ at its initial value. (ii) The annotation rate $c_j$ is identified only on cells whose presence the verdict pins down. We select such cells by the posterior with the cell's own belief set to $1/2$, so that the selection never looks at $m_j$, and we estimate $c_j$ on held-out images whose annotations the model never trained on (cross-fitting); estimating it on the training images is biased because the model's beliefs are fitted to the same annotations (\cref{app:em}).

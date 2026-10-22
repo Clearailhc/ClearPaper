@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+datasets/
+paper_c/results/v36/images/
+paper_c/results/v36/v36/
+paper_c/results/v36/*.zip
+paper_c/results/examples/*/
+paper_c/results/examples_fig1/*.jpg
+paper_c/results/*.zip
+paper_c/results/figdata/images/
+paper_c/results/v36_package/images/
+paper_c/results/fig1_industrial/images/
+paper_c/paper/build/

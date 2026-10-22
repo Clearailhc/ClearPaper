@@ -1,0 +1,6 @@
+{
+  "summary":  "Unified Bidirectional Selection & Prompt-First Floating AI Menu Plan:\n1. Bidirectional Homologous Selection (Source <-> Preview): Selecting text or right-clicking in either the LaTeX Source Stream or the Rendered Paper Preview resolves to a single unified selection state, automatically locating and highlighting the corresponding block/range across both panes.\n2. Single Unified Floating Agent Card: Replaces the fragmented dark micro-popover and multi-item context menu with one cohesive, Apple-aesthetic frosted floating card.\n3. Prompt-First Universal Design: Eliminates paper-specific hardcoded presets (e.g. CVPR / results/ / refs.bib labels) in favor of a natural language input box at the top (with @file autocomplete support) and 3 universal quick actions (Polish, Condense, Expand/Rewrite).",
+  "updatedAt":  "2026-10-22T01:20:24.982698294Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

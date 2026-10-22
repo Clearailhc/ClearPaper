@@ -1,0 +1,230 @@
+[
+ {
+  "file": "FP_1.jpg",
+  "source": "bddoia/test/4135eca0-583f6210.jpg",
+  "type": "FP",
+  "annotated_reasons": [
+   "traffic_light"
+  ],
+  "truth_old_rule": "STOP",
+  "truth_E1": "GO",
+  "exposure_under_old_rule (LUX q)": {
+   "obstacle_car": 0.007,
+   "traffic_sign": 0.007,
+   "obstacle_rider": 0.007,
+   "obstacle_person": 0.007,
+   "traffic_light": 0.947,
+   "obstacle_others": 0.007
+  },
+  "zero-shot": {
+   "reasons": {
+    "obstacle_car": 0.22,
+    "traffic_sign": 0.56,
+    "obstacle_rider": 0.01,
+    "obstacle_person": 0.01,
+    "traffic_light": 0.92,
+    "obstacle_others": 0.22
+   },
+   "P(stop) old rule": 0.98,
+   "P(stop) E1": 0.74,
+   "decision E1": "STOP"
+  },
+  "verdict-only": {
+   "reasons": {
+    "obstacle_car": 0.23,
+    "traffic_sign": 0.89,
+    "obstacle_rider": 0.13,
+    "obstacle_person": 0.09,
+    "traffic_light": 0.94,
+    "obstacle_others": 0.65
+   },
+   "P(stop) old rule": 1.0,
+   "P(stop) E1": 0.98,
+   "decision E1": "STOP"
+  },
+  "LUX": {
+   "reasons": {
+    "obstacle_car": 0.03,
+    "traffic_sign": 0.01,
+    "obstacle_rider": 0.0,
+    "obstacle_person": 0.0,
+    "traffic_light": 0.99,
+    "obstacle_others": 0.01
+   },
+   "P(stop) old rule": 0.99,
+   "P(stop) E1": 0.05,
+   "decision E1": "GO"
+  }
+ },
+ {
+  "file": "FP_2.jpg",
+  "source": "bddoia/test/e4a5d833-469222b6.jpg",
+  "type": "FP",
+  "annotated_reasons": [
+   "traffic_light"
+  ],
+  "truth_old_rule": "STOP",
+  "truth_E1": "GO",
+  "exposure_under_old_rule (LUX q)": {
+   "obstacle_car": 0.009,
+   "traffic_sign": 0.009,
+   "obstacle_rider": 0.009,
+   "obstacle_person": 0.009,
+   "traffic_light": 0.924,
+   "obstacle_others": 0.009
+  },
+  "zero-shot": {
+   "reasons": {
+    "obstacle_car": 0.31,
+    "traffic_sign": 0.3,
+    "obstacle_rider": 0.02,
+    "obstacle_person": 0.02,
+    "traffic_light": 0.86,
+    "obstacle_others": 0.23
+   },
+   "P(stop) old rule": 0.95,
+   "P(stop) E1": 0.64,
+   "decision E1": "STOP"
+  },
+  "verdict-only": {
+   "reasons": {
+    "obstacle_car": 0.14,
+    "traffic_sign": 0.88,
+    "obstacle_rider": 0.08,
+    "obstacle_person": 0.08,
+    "traffic_light": 0.95,
+    "obstacle_others": 0.59
+   },
+   "P(stop) old rule": 1.0,
+   "P(stop) E1": 0.96,
+   "decision E1": "STOP"
+  },
+  "LUX": {
+   "reasons": {
+    "obstacle_car": 0.03,
+    "traffic_sign": 0.02,
+    "obstacle_rider": 0.0,
+    "obstacle_person": 0.0,
+    "traffic_light": 0.99,
+    "obstacle_others": 0.02
+   },
+   "P(stop) old rule": 0.99,
+   "P(stop) E1": 0.08,
+   "decision E1": "GO"
+  }
+ },
+ {
+  "file": "FP_3.jpg",
+  "source": "bddoia/test/3a060876-4f306603.jpg",
+  "type": "FP",
+  "annotated_reasons": [
+   "traffic_light"
+  ],
+  "truth_old_rule": "STOP",
+  "truth_E1": "GO",
+  "exposure_under_old_rule (LUX q)": {
+   "obstacle_car": 0.007,
+   "traffic_sign": 0.007,
+   "obstacle_rider": 0.007,
+   "obstacle_person": 0.007,
+   "traffic_light": 0.902,
+   "obstacle_others": 0.007
+  },
+  "zero-shot": {
+   "reasons": {
+    "obstacle_car": 0.15,
+    "traffic_sign": 0.39,
+    "obstacle_rider": 0.03,
+    "obstacle_person": 0.05,
+    "traffic_light": 0.89,
+    "obstacle_others": 0.15
+   },
+   "P(stop) old rule": 0.96,
+   "P(stop) E1": 0.59,
+   "decision E1": "STOP"
+  },
+  "verdict-only": {
+   "reasons": {
+    "obstacle_car": 0.1,
+    "traffic_sign": 0.89,
+    "obstacle_rider": 0.09,
+    "obstacle_person": 0.09,
+    "traffic_light": 0.96,
+    "obstacle_others": 0.5
+   },
+   "P(stop) old rule": 1.0,
+   "P(stop) E1": 0.96,
+   "decision E1": "STOP"
+  },
+  "LUX": {
+   "reasons": {
+    "obstacle_car": 0.02,
+    "traffic_sign": 0.03,
+    "obstacle_rider": 0.0,
+    "obstacle_person": 0.01,
+    "traffic_light": 0.99,
+    "obstacle_others": 0.04
+   },
+   "P(stop) old rule": 0.99,
+   "P(stop) E1": 0.1,
+   "decision E1": "GO"
+  }
+ },
+ {
+  "file": "FP_4.jpg",
+  "source": "bddoia/test/0001542f-ec815219.jpg",
+  "type": "FP",
+  "annotated_reasons": [
+   "traffic_light"
+  ],
+  "truth_old_rule": "STOP",
+  "truth_E1": "GO",
+  "exposure_under_old_rule (LUX q)": {
+   "obstacle_car": 0.011,
+   "traffic_sign": 0.011,
+   "obstacle_rider": 0.01,
+   "obstacle_person": 0.01,
+   "traffic_light": 0.841,
+   "obstacle_others": 0.011
+  },
+  "zero-shot": {
+   "reasons": {
+    "obstacle_car": 0.15,
+    "traffic_sign": 0.39,
+    "obstacle_rider": 0.01,
+    "obstacle_person": 0.01,
+    "traffic_light": 0.8,
+    "obstacle_others": 0.18
+   },
+   "P(stop) old rule": 0.92,
+   "P(stop) E1": 0.59,
+   "decision E1": "STOP"
+  },
+  "verdict-only": {
+   "reasons": {
+    "obstacle_car": 0.27,
+    "traffic_sign": 0.91,
+    "obstacle_rider": 0.08,
+    "obstacle_person": 0.07,
+    "traffic_light": 0.94,
+    "obstacle_others": 0.54
+   },
+   "P(stop) old rule": 1.0,
+   "P(stop) E1": 0.97,
+   "decision E1": "STOP"
+  },
+  "LUX": {
+   "reasons": {
+    "obstacle_car": 0.06,
+    "traffic_sign": 0.04,
+    "obstacle_rider": 0.0,
+    "obstacle_person": 0.01,
+    "traffic_light": 0.99,
+    "obstacle_others": 0.06
+   },
+   "P(stop) old rule": 0.99,
+   "P(stop) E1": 0.16,
+   "decision E1": "GO"
+  }
+ }
+]

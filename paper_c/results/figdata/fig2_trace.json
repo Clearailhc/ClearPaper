@@ -1,0 +1,851 @@
+{
+ "_doc": "Figure 2 trace: one BDD-OIA and one InspecSafe test image through every stage (research_log #115). Raw Yes/No log-probabilities are in fig2_raw_logits.json (trace_logits.py).",
+ "samples": [
+  {
+   "dataset": "bddoia",
+   "image": "images/fig2_bddoia.jpg",
+   "source": "bddoia/test/0001542f-ec815219.jpg",
+   "facts": [
+    "obstacle_car",
+    "traffic_sign",
+    "obstacle_rider",
+    "obstacle_person",
+    "traffic_light",
+    "obstacle_others"
+   ],
+   "asked": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "label": 1,
+   "annotated": [
+    "traffic_light"
+   ],
+   "module_I_zero_shot": {
+    "raw_logit_z": [
+     1.0,
+     1.75,
+     -11.5,
+     -9.5,
+     8.75,
+     1.25
+    ],
+    "raw_prob_sigmoid_z": [
+     0.7311,
+     0.852,
+     0.0,
+     0.0001,
+     0.9998,
+     0.7773
+    ]
+   },
+   "module_II_zero_shot_normal_referenced": {
+    "note": "BDD-OIA results in the paper use the per-fact temperature/bias calibration; the normal-referenced (MAD + gamma) stage is shown for illustration",
+    "mu_0": [
+     -1.25,
+     -6.75,
+     -10.25,
+     -6.0,
+     -6.0,
+     -2.5
+    ],
+    "sigma_0 (1.4826*MAD, floor 0.5)": [
+     3.7065,
+     2.9652,
+     2.2239,
+     3.7065,
+     4.8185,
+     3.3359
+    ],
+    "temperature": 1.7435,
+    "bias_b_j": [
+     0.5938,
+     -0.0613,
+     -1.003,
+     -0.2059,
+     0.2424,
+     -0.2145
+    ],
+    "gamma_power_damping": 5.0022,
+    "z_whitened": [
+     0.607,
+     2.8666,
+     -0.5621,
+     -0.9443,
+     3.0611,
+     1.1241
+    ],
+    "p_before_gamma": [
+     0.7195,
+     0.8296,
+     0.2099,
+     0.3214,
+     0.8806,
+     0.6059
+    ],
+    "calibrated_p": [
+     0.1927,
+     0.3928,
+     0.0004,
+     0.0034,
+     0.5294,
+     0.0816
+    ],
+    "correlation_groups": "not used (use_groups=False in all reported results)"
+   },
+   "trained_models": {
+    "verdict-only": {
+     "raw_logit_z": [
+      2.75,
+      12.0,
+      -5.75,
+      -5.0,
+      14.75,
+      7.0
+     ],
+     "raw_prob_sigmoid_z": [
+      0.9399,
+      1.0,
+      0.0032,
+      0.0067,
+      1.0,
+      0.9991
+     ],
+     "temperature": 3.7315,
+     "bias_b_j": [
+      -1.7279,
+      -0.9469,
+      -0.9068,
+      -1.2309,
+      -1.1487,
+      -1.733
+     ],
+     "calibrated_p": [
+      0.2707,
+      0.9063,
+      0.0796,
+      0.071,
+      0.9429,
+      0.5357
+     ]
+    },
+    "fact supervision": {
+     "raw_logit_z": [
+      -7.75,
+      -10.25,
+      -15.0,
+      -12.0,
+      12.75,
+      -8.75
+     ],
+     "raw_prob_sigmoid_z": [
+      0.0004,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0002
+     ],
+     "temperature": 2.9135,
+     "bias_b_j": [
+      -0.5274,
+      -0.2164,
+      -0.0399,
+      -0.1261,
+      0.1773,
+      -0.2534
+     ],
+     "calibrated_p": [
+      0.0396,
+      0.0233,
+      0.0056,
+      0.0141,
+      0.9896,
+      0.0371
+     ]
+    },
+    "LUX": {
+     "raw_logit_z": [
+      -7.25,
+      -9.75,
+      -19.5,
+      -14.5,
+      12.625,
+      -7.75
+     ],
+     "raw_prob_sigmoid_z": [
+      0.0007,
+      0.0001,
+      0.0,
+      0.0,
+      1.0,
+      0.0004
+     ],
+     "temperature": 3.0896,
+     "bias_b_j": [
+      -0.4287,
+      -0.0691,
+      0.083,
+      -0.0549,
+      0.2963,
+      -0.2224
+     ],
+     "calibrated_p": [
+      0.0587,
+      0.0382,
+      0.002,
+      0.0086,
+      0.9877,
+      0.0612
+     ]
+    },
+    "half labels: fact supervision (unlabeled = absent)": {
+     "raw_logit_z": [
+      -11.2501,
+      -13.625,
+      -14.8751,
+      -13.3751,
+      1.1256,
+      -12.8751
+     ],
+     "raw_prob_sigmoid_z": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.755,
+      0.0
+     ],
+     "temperature": 3.2804,
+     "bias_b_j": [
+      0.6503,
+      0.2283,
+      0.168,
+      0.0373,
+      1.297,
+      0.0627
+     ],
+     "calibrated_p": [
+      0.0585,
+      0.0194,
+      0.0125,
+      0.0173,
+      0.8376,
+      0.0206
+     ]
+    },
+    "half labels: LUX online EM": {
+     "raw_logit_z": [
+      -7.0,
+      -3.9999,
+      -19.25,
+      -13.25,
+      17.25,
+      -5.5
+     ],
+     "raw_prob_sigmoid_z": [
+      0.0009,
+      0.018,
+      0.0,
+      0.0,
+      1.0,
+      0.0041
+     ],
+     "temperature": 3.5489,
+     "bias_b_j": [
+      -0.8218,
+      -0.5885,
+      -0.0468,
+      -0.3992,
+      -0.1768,
+      -0.5358
+     ],
+     "calibrated_p": [
+      0.0576,
+      0.1524,
+      0.0042,
+      0.0158,
+      0.9908,
+      0.1105
+     ]
+    }
+   }
+  },
+  {
+   "dataset": "inspecsafe",
+   "image": "images/fig2_inspecsafe.jpg",
+   "source": "tunnel-Level02-SuspendedRail-002457-001",
+   "facts": [
+    "open_flame",
+    "smoke",
+    "personnel_collapse",
+    "smoking",
+    "oil_leakage",
+    "no_hard_hat",
+    "no_gloves",
+    "no_mask",
+    "mobile_phone",
+    "water_pooling",
+    "oil_accumulation",
+    "foreign_object_light",
+    "foreign_object_hard",
+    "cabinet_door_open",
+    "nonmotor_vehicle"
+   ],
+   "asked": [
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "label": 2,
+   "annotated": "In the tunnel scenario, personnel do not wear gloves, masks, or safety helmets. The safety level is Grade Two.",
+   "module_I_zero_shot": {
+    "raw_logit_z": [
+     -17.75,
+     -20.5,
+     -16.25,
+     -14.5,
+     -18.5,
+     10.5,
+     10.0,
+     12.5,
+     -14.0,
+     -10.25,
+     -16.25,
+     6.0,
+     4.5,
+     -10.5,
+     -13.25
+    ],
+    "raw_prob_sigmoid_z": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.9975,
+     0.989,
+     0.0,
+     0.0
+    ]
+   },
+   "module_II_zero_shot_normal_referenced": {
+    "note": "InspecSafe zero-shot results in the paper use exactly this normal-referenced (MAD + gamma) calibration",
+    "mu_0": [
+     -17.0,
+     -15.0,
+     -15.75,
+     -18.0,
+     -16.25,
+     -12.25,
+     -11.5,
+     -13.0,
+     -19.0,
+     -11.25,
+     -10.0,
+     -14.75,
+     -12.75,
+     -9.5,
+     -13.75
+    ],
+    "sigma_0 (1.4826*MAD, floor 0.5)": [
+     1.112,
+     4.4478,
+     1.8533,
+     1.8532,
+     2.5946,
+     3.3358,
+     2.9652,
+     2.9652,
+     2.2239,
+     3.7065,
+     5.5597,
+     1.8533,
+     1.8532,
+     3.3359,
+     1.4826
+    ],
+    "temperature": 3.4856,
+    "bias_b_j": [
+     -2.0722,
+     -0.748,
+     -0.792,
+     -0.657,
+     0.5488,
+     -0.1015,
+     -0.2395,
+     -0.4446,
+     -0.6923,
+     -0.5872,
+     -0.2669,
+     -0.7319,
+     -0.6621,
+     -0.3634,
+     0.2296
+    ],
+    "gamma_power_damping": 6.551,
+    "z_whitened": [
+     -0.6745,
+     -1.2366,
+     -0.2698,
+     1.8886,
+     -0.8672,
+     6.8199,
+     7.2508,
+     8.5998,
+     2.2483,
+     0.2698,
+     -1.1242,
+     11.1965,
+     9.308,
+     -0.2998,
+     0.3372
+    ],
+    "p_before_gamma": [
+     0.094,
+     0.2492,
+     0.2954,
+     0.4712,
+     0.5744,
+     0.8647,
+     0.863,
+     0.8832,
+     0.4882,
+     0.3752,
+     0.3568,
+     0.9228,
+     0.8817,
+     0.3895,
+     0.5809
+    ],
+    "calibrated_p": [
+     0.0,
+     0.0001,
+     0.0003,
+     0.0072,
+     0.0265,
+     0.3859,
+     0.381,
+     0.4431,
+     0.0091,
+     0.0016,
+     0.0012,
+     0.5906,
+     0.4382,
+     0.0021,
+     0.0285
+    ],
+    "correlation_groups": "not used (use_groups=False in all reported results)"
+   },
+   "trained_models": {
+    "verdict-only (V34)": {
+     "raw_logit_z": [
+      -37.375,
+      -35.5,
+      -38.0,
+      -36.25,
+      -37.625,
+      48.5,
+      46.125,
+      37.0,
+      -13.25,
+      -18.0,
+      -36.875,
+      45.875,
+      -30.25,
+      -38.625,
+      -37.125
+     ],
+     "raw_prob_sigmoid_z": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "temperature": 0.1663,
+     "bias_b_j": [
+      -0.0,
+      -0.0,
+      -0.0,
+      0.0,
+      -0.1032,
+      0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      0.0,
+      -0.0,
+      0.0,
+      0.0,
+      -0.0
+     ],
+     "calibrated_p": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "level-fill SFT": {
+     "raw_logit_z": [
+      -4.625,
+      -5.9999,
+      -4.875,
+      -3.7499,
+      -3.3749,
+      6.2501,
+      6.5001,
+      6.1251,
+      -1.6249,
+      3.375,
+      -2.6249,
+      5.8751,
+      -5.8749,
+      -2.1248,
+      -5.4999
+     ],
+     "raw_prob_sigmoid_z": [
+      0.0097,
+      0.0025,
+      0.0076,
+      0.023,
+      0.0331,
+      0.9981,
+      0.9985,
+      0.9978,
+      0.1645,
+      0.9669,
+      0.0676,
+      0.9972,
+      0.0028,
+      0.1067,
+      0.0041
+     ],
+     "temperature": 1.5272,
+     "bias_b_j": [
+      -0.1027,
+      -0.1393,
+      -0.0382,
+      -0.0387,
+      -0.1037,
+      0.0078,
+      0.0059,
+      0.0048,
+      0.0133,
+      0.1529,
+      -0.0008,
+      0.0332,
+      -0.008,
+      -0.0225,
+      -0.0441
+     ],
+     "calibrated_p": [
+      0.0418,
+      0.0168,
+      0.038,
+      0.0763,
+      0.09,
+      0.9837,
+      0.9861,
+      0.9823,
+      0.2591,
+      0.914,
+      0.1519,
+      0.9798,
+      0.0207,
+      0.1956,
+      0.0254
+     ]
+    },
+    "LUX (V42 s0)": {
+     "raw_logit_z": [
+      -24.0,
+      -26.25,
+      -25.0,
+      -22.0,
+      -24.5,
+      22.5,
+      18.5,
+      16.75,
+      -21.0,
+      -22.75,
+      -23.25,
+      -19.25,
+      -22.75,
+      -17.75,
+      -23.0
+     ],
+     "raw_prob_sigmoid_z": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "temperature": 3.9501,
+     "bias_b_j": [
+      -0.0158,
+      -0.6362,
+      -0.0124,
+      -0.0944,
+      -0.0569,
+      0.1368,
+      0.1013,
+      0.0144,
+      -0.0062,
+      -0.2262,
+      -0.006,
+      0.3773,
+      0.0067,
+      -0.0404,
+      -0.1354
+     ],
+     "calibrated_p": [
+      0.0023,
+      0.0007,
+      0.0018,
+      0.0035,
+      0.0019,
+      0.9971,
+      0.9917,
+      0.986,
+      0.0049,
+      0.0025,
+      0.0028,
+      0.011,
+      0.0032,
+      0.0106,
+      0.0026
+     ]
+    }
+   }
+  }
+ ],
+ "module_III_training_samples": [
+  {
+   "dataset": "bddoia",
+   "split": "train",
+   "image": "images/fig2_bddoia_train.jpg",
+   "source": "bddoia/train/264b901b-3d77e117.jpg",
+   "annotated": [
+    "traffic_light"
+   ],
+   "facts": [
+    "obstacle_car",
+    "traffic_sign",
+    "obstacle_rider",
+    "obstacle_person",
+    "traffic_light",
+    "obstacle_others"
+   ],
+   "exposure_old_rule (exact, annotated state)": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "exposure_with_random_tables": null,
+   "random_tables_note": "OR rule is binary (K = 2): random tables leave it unchanged, and the BDD runs use alpha = 0",
+   "prior_p0 (base model, calibrated)": [
+    0.1625,
+    0.077,
+    0.0222,
+    0.0699,
+    0.1639,
+    0.1155
+   ],
+   "posterior_q (verdict + annotations, c = 0.99, delta = 0, eps = 0.05)": [
+    0.0019,
+    0.0008,
+    0.0002,
+    0.0008,
+    1.0,
+    0.0013
+   ]
+  },
+  {
+   "dataset": "inspecsafe",
+   "split": "train",
+   "image": "images/fig2_inspecsafe_train.jpg",
+   "source": "coal_conveyor-Level01-SuspendedRail-002486-001",
+   "description": "In the coal conveying trestle scenario, the potential hazards in the image are personnel smoking and not wearing gloves. Therefore, the safety level is classified as Level One.",
+   "level": 3,
+   "facts": [
+    "open_flame",
+    "smoke",
+    "personnel_collapse",
+    "smoking",
+    "oil_leakage",
+    "no_hard_hat",
+    "no_gloves",
+    "no_mask",
+    "mobile_phone",
+    "water_pooling",
+    "oil_accumulation",
+    "foreign_object_light",
+    "foreign_object_hard",
+    "cabinet_door_open",
+    "nonmotor_vehicle"
+   ],
+   "asked": [
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    false,
+    false
+   ],
+   "severity_row": [
+    3,
+    3,
+    3,
+    3,
+    0,
+    3,
+    2,
+    2,
+    2,
+    1,
+    0,
+    2,
+    2,
+    0,
+    0
+   ],
+   "exposure_old_rule (exact, described state)": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "exposure_with_random_tables (rho = 0.3, 2000 draws, as in training)": [
+    0.1585,
+    0.158,
+    0.1565,
+    0.7145,
+    0.0,
+    0.1485,
+    0.1205,
+    0.023,
+    0.028,
+    0.026,
+    0.0,
+    0.027,
+    0.024,
+    0.0,
+    0.0
+   ],
+   "prior_p0 (base model, calibrated)": [
+    0.0006,
+    0.0001,
+    0.0004,
+    0.3221,
+    0.0004,
+    0.0007,
+    0.7598,
+    0.6777,
+    0.9772,
+    0.0005,
+    0.0062,
+    0.0018,
+    0.003,
+    0.0222,
+    0.0116
+   ],
+   "posterior_q (verdict + mentions, configured c_j, delta = 0.01, eps = 0.05)": [
+    0.0,
+    0.0,
+    0.0,
+    0.9997,
+    0.0004,
+    0.0,
+    0.9967,
+    0.1752,
+    0.8494,
+    0.0001,
+    0.0062,
+    0.0,
+    0.0002,
+    0.0222,
+    0.0116
+   ]
+  }
+ ]
+}

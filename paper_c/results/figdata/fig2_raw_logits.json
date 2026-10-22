@@ -1,0 +1,1706 @@
+{
+ "_doc": "Figure 2 module I: raw Yes/No first-token log-probabilities (research_log #115)",
+ "traces": [
+  {
+   "dataset": "bddoia",
+   "source": "bddoia/test/0001542f-ec815219.jpg",
+   "model": "zero-shot",
+   "facts": [
+    "obstacle_car",
+    "traffic_sign",
+    "obstacle_rider",
+    "obstacle_person",
+    "traffic_light",
+    "obstacle_others"
+   ],
+   "questions": [
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a car or other vehicle in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a traffic sign telling it to stop or yield that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a cyclist or motorcyclist in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a pedestrian in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a red traffic light that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there another obstacle on the road that requires it to stop or slow down?\nAnswer:"
+   ],
+   "ell_yes": [
+    -0.3869,
+    -0.2014,
+    -11.75,
+    -9.2501,
+    -0.0002,
+    -0.3133
+   ],
+   "ell_no": [
+    -1.1369,
+    -1.7014,
+    -0.0,
+    -0.0001,
+    -8.7502,
+    -1.3133
+   ],
+   "z = ell_yes - ell_no": [
+    0.75,
+    1.5,
+    -11.75,
+    -9.25,
+    8.75,
+    1.0
+   ],
+   "z_fanout_style (case variants pooled, top-20 floor, as the fan-out computes it)": [
+    0.75,
+    1.5,
+    -11.75,
+    -9.25,
+    8.75,
+    1.0
+   ],
+   "z_fanout (vLLM, as used in all results)": [
+    1.0,
+    1.75,
+    -11.5,
+    -9.5,
+    8.75,
+    1.25
+   ],
+   "top3_first_tokens": [
+    [
+     [
+      "Yes",
+      -0.387
+     ],
+     [
+      "No",
+      -1.137
+     ],
+     [
+      "yes",
+      -11.637
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.201
+     ],
+     [
+      "No",
+      -1.701
+     ],
+     [
+      "yes",
+      -11.826
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -11.75
+     ],
+     [
+      "no",
+      -23.25
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -9.25
+     ],
+     [
+      "no",
+      -20.875
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.0
+     ],
+     [
+      "No",
+      -8.75
+     ],
+     [
+      "yes",
+      -13.875
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.313
+     ],
+     [
+      "No",
+      -1.313
+     ],
+     [
+      "yes",
+      -11.938
+     ]
+    ]
+   ]
+  },
+  {
+   "dataset": "bddoia",
+   "source": "bddoia/test/0001542f-ec815219.jpg",
+   "model": "verdict-only",
+   "facts": [
+    "obstacle_car",
+    "traffic_sign",
+    "obstacle_rider",
+    "obstacle_person",
+    "traffic_light",
+    "obstacle_others"
+   ],
+   "questions": [
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a car or other vehicle in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a traffic sign telling it to stop or yield that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a cyclist or motorcyclist in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a pedestrian in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a red traffic light that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there another obstacle on the road that requires it to stop or slow down?\nAnswer:"
+   ],
+   "ell_yes": [
+    -0.1002,
+    -0.0,
+    -5.5041,
+    -5.0067,
+    -0.0,
+    -0.0009
+   ],
+   "ell_no": [
+    -2.3502,
+    -12.25,
+    -0.0041,
+    -0.0067,
+    -15.0,
+    -7.0009
+   ],
+   "z = ell_yes - ell_no": [
+    2.25,
+    12.25,
+    -5.5,
+    -5.0,
+    15.0,
+    7.0
+   ],
+   "z_fanout_style (case variants pooled, top-20 floor, as the fan-out computes it)": [
+    2.25,
+    12.25,
+    -5.5,
+    -5.0,
+    15.0,
+    7.0
+   ],
+   "z_fanout (vLLM, as used in all results)": [
+    2.75,
+    12.0,
+    -5.75,
+    -5.0,
+    14.75,
+    7.0
+   ],
+   "top3_first_tokens": [
+    [
+     [
+      "Yes",
+      -0.1
+     ],
+     [
+      "No",
+      -2.35
+     ],
+     [
+      "yes",
+      -11.975
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.0
+     ],
+     [
+      "No",
+      -12.25
+     ],
+     [
+      "yes",
+      -13.875
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.004
+     ],
+     [
+      "Yes",
+      -5.504
+     ],
+     [
+      "no",
+      -18.754
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.007
+     ],
+     [
+      "Yes",
+      -5.007
+     ],
+     [
+      "no",
+      -17.132
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.0
+     ],
+     [
+      "No",
+      -15.0
+     ],
+     [
+      "yes",
+      -15.25
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.001
+     ],
+     [
+      "No",
+      -7.001
+     ],
+     [
+      "yes",
+      -12.501
+     ]
+    ]
+   ]
+  },
+  {
+   "dataset": "bddoia",
+   "source": "bddoia/test/0001542f-ec815219.jpg",
+   "model": "LUX",
+   "facts": [
+    "obstacle_car",
+    "traffic_sign",
+    "obstacle_rider",
+    "obstacle_person",
+    "traffic_light",
+    "obstacle_others"
+   ],
+   "questions": [
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a car or other vehicle in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a traffic sign telling it to stop or yield that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a cyclist or motorcyclist in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a pedestrian in the way that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there a red traffic light that requires it to stop or slow down?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Look at the road ahead of the ego vehicle. Is there another obstacle on the road that requires it to stop or slow down?\nAnswer:"
+   ],
+   "ell_yes": [
+    -7.1258,
+    -9.7501,
+    -19.75,
+    -14.5,
+    -0.0,
+    -7.7504
+   ],
+   "ell_no": [
+    -0.0008,
+    -0.0001,
+    0.0,
+    -0.0,
+    -12.5,
+    -0.0004
+   ],
+   "z = ell_yes - ell_no": [
+    -7.125,
+    -9.75,
+    -19.75,
+    -14.5,
+    12.5,
+    -7.75
+   ],
+   "z_fanout_style (case variants pooled, top-20 floor, as the fan-out computes it)": [
+    -7.125,
+    -9.75,
+    -19.75,
+    -14.5,
+    12.5,
+    -7.75
+   ],
+   "z_fanout (vLLM, as used in all results)": [
+    -7.25,
+    -9.75,
+    -19.5,
+    -14.5,
+    12.625,
+    -7.75
+   ],
+   "top3_first_tokens": [
+    [
+     [
+      "No",
+      -0.001
+     ],
+     [
+      "Yes",
+      -7.126
+     ],
+     [
+      "no",
+      -14.251
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -9.75
+     ],
+     [
+      "no",
+      -15.625
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -19.75
+     ],
+     [
+      "no",
+      -21.75
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -14.5
+     ],
+     [
+      "no",
+      -19.75
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.0
+     ],
+     [
+      "No",
+      -12.5
+     ],
+     [
+      "yes",
+      -13.125
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -7.75
+     ],
+     [
+      "no",
+      -14.625
+     ]
+    ]
+   ]
+  },
+  {
+   "dataset": "inspecsafe",
+   "source": "tunnel-Level02-SuspendedRail-002457-001",
+   "model": "zero-shot",
+   "facts": [
+    "open_flame",
+    "smoke",
+    "personnel_collapse",
+    "smoking",
+    "no_hard_hat",
+    "no_gloves",
+    "no_mask",
+    "mobile_phone",
+    "water_pooling",
+    "oil_accumulation",
+    "foreign_object_light",
+    "foreign_object_hard",
+    "cabinet_door_open",
+    "nonmotor_vehicle"
+   ],
+   "questions": [
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there an open flame or fire visible in the image?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there smoke that indicates a fire or an abnormal emission? Ignore normal process smoke or steam, such as from a slag pot or furnace.\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who has collapsed, fallen, or is lying on the ground?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person smoking (holding a lit cigarette) in the image?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing a hard hat (safety helmet)?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing protective gloves?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing a face mask?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person using a mobile phone?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there pooled or standing water on the floor or ground?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there accumulated oil or an oil stain on the floor or equipment?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Are there foreign objects such as plastic bags, plastic bottles, foam, or paper lying around?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Are there foreign objects such as pieces of wood or metal lying where they should not be?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there an electrical or equipment cabinet door left open?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a non-motorized vehicle (such as a bicycle or tricycle) in a vehicle lane?\nAnswer:"
+   ],
+   "ell_yes": [
+    -17.0,
+    -19.75,
+    -16.0,
+    -15.5,
+    -0.0,
+    -0.0,
+    -0.0002,
+    -14.0,
+    -8.7502,
+    -17.0,
+    -0.0019,
+    -0.0086,
+    -9.7501,
+    -12.25
+   ],
+   "ell_no": [
+    0.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -11.0,
+    -10.75,
+    -8.5002,
+    -0.0,
+    -0.0002,
+    0.0,
+    -6.2519,
+    -4.7586,
+    -0.0001,
+    -0.0
+   ],
+   "z = ell_yes - ell_no": [
+    -17.0,
+    -19.75,
+    -16.0,
+    -15.5,
+    11.0,
+    10.75,
+    8.5,
+    -14.0,
+    -8.75,
+    -17.0,
+    6.25,
+    4.75,
+    -9.75,
+    -12.25
+   ],
+   "z_fanout_style (case variants pooled, top-20 floor, as the fan-out computes it)": [
+    -17.0,
+    -19.75,
+    -16.0,
+    -15.5,
+    11.0,
+    10.75,
+    8.5,
+    -14.0,
+    -8.75,
+    -17.0,
+    6.25,
+    4.75,
+    -9.75,
+    -12.25
+   ],
+   "z_fanout (vLLM, as used in all results)": [
+    -17.75,
+    -20.5,
+    -16.25,
+    -14.5,
+    10.5,
+    10.0,
+    12.5,
+    -14.0,
+    -10.25,
+    -16.25,
+    6.0,
+    4.5,
+    -10.5,
+    -13.25
+   ],
+   "top3_first_tokens": [
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -17.0
+     ],
+     [
+      "NO",
+      -25.75
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -19.75
+     ],
+     [
+      " No",
+      -28.0
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -16.0
+     ],
+     [
+      " No",
+      -25.25
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -15.5
+     ],
+     [
+      "no",
+      -25.0
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.0
+     ],
+     [
+      "No",
+      -11.0
+     ],
+     [
+      "yes",
+      -16.375
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.0
+     ],
+     [
+      "No",
+      -10.75
+     ],
+     [
+      "yes",
+      -16.75
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.0
+     ],
+     [
+      "No",
+      -8.5
+     ],
+     [
+      "yes",
+      -16.5
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -14.0
+     ],
+     [
+      "no",
+      -25.25
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -8.75
+     ],
+     [
+      "no",
+      -19.375
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -17.0
+     ],
+     [
+      "no",
+      -26.0
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.002
+     ],
+     [
+      "No",
+      -6.252
+     ],
+     [
+      "yes",
+      -13.377
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.009
+     ],
+     [
+      "No",
+      -4.759
+     ],
+     [
+      "yes",
+      -13.634
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -9.75
+     ],
+     [
+      "no",
+      -20.75
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -12.25
+     ],
+     [
+      "NO",
+      -23.0
+     ]
+    ]
+   ]
+  },
+  {
+   "dataset": "inspecsafe",
+   "source": "tunnel-Level02-SuspendedRail-002457-001",
+   "model": "verdict-only (V34)",
+   "facts": [
+    "open_flame",
+    "smoke",
+    "personnel_collapse",
+    "smoking",
+    "no_hard_hat",
+    "no_gloves",
+    "no_mask",
+    "mobile_phone",
+    "water_pooling",
+    "oil_accumulation",
+    "foreign_object_light",
+    "foreign_object_hard",
+    "cabinet_door_open",
+    "nonmotor_vehicle"
+   ],
+   "questions": [
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there an open flame or fire visible in the image?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there smoke that indicates a fire or an abnormal emission? Ignore normal process smoke or steam, such as from a slag pot or furnace.\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who has collapsed, fallen, or is lying on the ground?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person smoking (holding a lit cigarette) in the image?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing a hard hat (safety helmet)?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing protective gloves?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing a face mask?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person using a mobile phone?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there pooled or standing water on the floor or ground?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there accumulated oil or an oil stain on the floor or equipment?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Are there foreign objects such as plastic bags, plastic bottles, foam, or paper lying around?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Are there foreign objects such as pieces of wood or metal lying where they should not be?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there an electrical or equipment cabinet door left open?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a non-motorized vehicle (such as a bicycle or tricycle) in a vehicle lane?\nAnswer:"
+   ],
+   "ell_yes": [
+    -56.5,
+    -60.208,
+    -52.3125,
+    -57.5938,
+    0.0,
+    0.0,
+    0.0,
+    -16.75,
+    -27.0,
+    -54.3125,
+    0.0,
+    -9.7501,
+    -39.875,
+    -50.0625
+   ],
+   "ell_no": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -51.25,
+    -45.5,
+    -37.25,
+    0.0,
+    0.0,
+    0.0,
+    -50.5,
+    -0.0001,
+    0.0,
+    0.0
+   ],
+   "z = ell_yes - ell_no": [
+    -56.5,
+    -60.208,
+    -52.3125,
+    -57.5938,
+    51.25,
+    45.5,
+    37.25,
+    -16.75,
+    -27.0,
+    -54.3125,
+    50.5,
+    -9.75,
+    -39.875,
+    -50.0625
+   ],
+   "z_fanout_style (case variants pooled, top-20 floor, as the fan-out computes it)": [
+    -37.5,
+    -35.0,
+    -38.125,
+    -35.375,
+    47.375,
+    45.5,
+    37.25,
+    -16.75,
+    -27.0,
+    -35.75,
+    46.0,
+    -9.75,
+    -39.5,
+    -37.125
+   ],
+   "z_fanout (vLLM, as used in all results)": [
+    -37.375,
+    -35.5,
+    -38.0,
+    -36.25,
+    48.5,
+    46.125,
+    37.0,
+    -13.25,
+    -18.0,
+    -36.875,
+    45.875,
+    -30.25,
+    -38.625,
+    -37.125
+   ],
+   "top3_first_tokens": [
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "no",
+      -21.25
+     ],
+     [
+      "NO",
+      -22.0
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      " No",
+      -20.0
+     ],
+     [
+      "no",
+      -20.25
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      " No",
+      -22.0
+     ],
+     [
+      "no",
+      -22.5
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "no",
+      -19.25
+     ],
+     [
+      " No",
+      -21.0
+     ]
+    ],
+    [
+     [
+      "Yes",
+      0.0
+     ],
+     [
+      "yes",
+      -22.5
+     ],
+     [
+      " Yes",
+      -27.5
+     ]
+    ],
+    [
+     [
+      "Yes",
+      0.0
+     ],
+     [
+      "yes",
+      -20.75
+     ],
+     [
+      " Yes",
+      -27.75
+     ]
+    ],
+    [
+     [
+      "Yes",
+      0.0
+     ],
+     [
+      "yes",
+      -24.75
+     ],
+     [
+      " Yes",
+      -29.0
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -16.75
+     ],
+     [
+      "no",
+      -26.0
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "no",
+      -22.0
+     ],
+     [
+      "NO",
+      -26.5
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "no",
+      -19.25
+     ],
+     [
+      " No",
+      -21.5
+     ]
+    ],
+    [
+     [
+      "Yes",
+      0.0
+     ],
+     [
+      "yes",
+      -20.25
+     ],
+     [
+      " Yes",
+      -26.25
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.0
+     ],
+     [
+      "Yes",
+      -9.75
+     ],
+     [
+      "no",
+      -24.25
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "no",
+      -21.75
+     ],
+     [
+      "NO",
+      -26.0
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "no",
+      -22.25
+     ],
+     [
+      " No",
+      -24.0
+     ]
+    ]
+   ]
+  },
+  {
+   "dataset": "inspecsafe",
+   "source": "tunnel-Level02-SuspendedRail-002457-001",
+   "model": "level-fill SFT",
+   "facts": [
+    "open_flame",
+    "smoke",
+    "personnel_collapse",
+    "smoking",
+    "no_hard_hat",
+    "no_gloves",
+    "no_mask",
+    "mobile_phone",
+    "water_pooling",
+    "oil_accumulation",
+    "foreign_object_light",
+    "foreign_object_hard",
+    "cabinet_door_open",
+    "nonmotor_vehicle"
+   ],
+   "questions": [
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there an open flame or fire visible in the image?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there smoke that indicates a fire or an abnormal emission? Ignore normal process smoke or steam, such as from a slag pot or furnace.\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who has collapsed, fallen, or is lying on the ground?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person smoking (holding a lit cigarette) in the image?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing a hard hat (safety helmet)?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing protective gloves?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing a face mask?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person using a mobile phone?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there pooled or standing water on the floor or ground?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there accumulated oil or an oil stain on the floor or equipment?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Are there foreign objects such as plastic bags, plastic bottles, foam, or paper lying around?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Are there foreign objects such as pieces of wood or metal lying where they should not be?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there an electrical or equipment cabinet door left open?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a non-motorized vehicle (such as a bicycle or tricycle) in a vehicle lane?\nAnswer:"
+   ],
+   "ell_yes": [
+    -4.5111,
+    -5.8778,
+    -4.8826,
+    -4.3876,
+    -0.0018,
+    -0.0014,
+    -0.0026,
+    -1.8051,
+    -0.0704,
+    -3.1681,
+    -0.0033,
+    -6.0025,
+    -1.9106,
+    -5.2553
+   ],
+   "ell_no": [
+    -0.0111,
+    -0.0028,
+    -0.0076,
+    -0.0126,
+    -6.3768,
+    -6.6264,
+    -6.0026,
+    -0.1801,
+    -2.6954,
+    -0.0431,
+    -5.7533,
+    -0.0025,
+    -0.1606,
+    -0.0053
+   ],
+   "z = ell_yes - ell_no": [
+    -4.5,
+    -5.875,
+    -4.875,
+    -4.375,
+    6.375,
+    6.625,
+    6.0,
+    -1.625,
+    2.625,
+    -3.125,
+    5.75,
+    -6.0,
+    -1.75,
+    -5.25
+   ],
+   "z_fanout_style (case variants pooled, top-20 floor, as the fan-out computes it)": [
+    -4.5,
+    -5.875,
+    -4.875,
+    -4.375,
+    6.3751,
+    6.6251,
+    6.0001,
+    -1.6249,
+    2.625,
+    -3.1249,
+    5.7501,
+    -6.0,
+    -1.7499,
+    -5.25
+   ],
+   "z_fanout (vLLM, as used in all results)": [
+    -4.625,
+    -5.9999,
+    -4.875,
+    -3.7499,
+    6.2501,
+    6.5001,
+    6.1251,
+    -1.6249,
+    3.375,
+    -2.6249,
+    5.8751,
+    -5.8749,
+    -2.1248,
+    -5.4999
+   ],
+   "top3_first_tokens": [
+    [
+     [
+      "No",
+      -0.011
+     ],
+     [
+      "Yes",
+      -4.511
+     ],
+     [
+      "NO",
+      -11.261
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.003
+     ],
+     [
+      "Yes",
+      -5.878
+     ],
+     [
+      "NO",
+      -12.003
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.008
+     ],
+     [
+      "Yes",
+      -4.883
+     ],
+     [
+      "NO",
+      -11.883
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.013
+     ],
+     [
+      "Yes",
+      -4.388
+     ],
+     [
+      "NO",
+      -11.013
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.002
+     ],
+     [
+      "No",
+      -6.377
+     ],
+     [
+      "yes",
+      -10.502
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.001
+     ],
+     [
+      "No",
+      -6.626
+     ],
+     [
+      "yes",
+      -10.251
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.003
+     ],
+     [
+      "No",
+      -6.003
+     ],
+     [
+      "yes",
+      -10.503
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.18
+     ],
+     [
+      "Yes",
+      -1.805
+     ],
+     [
+      "NO",
+      -10.118
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.07
+     ],
+     [
+      "No",
+      -2.695
+     ],
+     [
+      "yes",
+      -9.445
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.043
+     ],
+     [
+      "Yes",
+      -3.168
+     ],
+     [
+      "NO",
+      -10.668
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.003
+     ],
+     [
+      "No",
+      -5.753
+     ],
+     [
+      "yes",
+      -10.253
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.003
+     ],
+     [
+      "Yes",
+      -6.003
+     ],
+     [
+      "NO",
+      -11.503
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.161
+     ],
+     [
+      "Yes",
+      -1.911
+     ],
+     [
+      "no",
+      -9.911
+     ]
+    ],
+    [
+     [
+      "No",
+      -0.005
+     ],
+     [
+      "Yes",
+      -5.255
+     ],
+     [
+      "NO",
+      -11.255
+     ]
+    ]
+   ]
+  },
+  {
+   "dataset": "inspecsafe",
+   "source": "tunnel-Level02-SuspendedRail-002457-001",
+   "model": "LUX (V42 s0)",
+   "facts": [
+    "open_flame",
+    "smoke",
+    "personnel_collapse",
+    "smoking",
+    "no_hard_hat",
+    "no_gloves",
+    "no_mask",
+    "mobile_phone",
+    "water_pooling",
+    "oil_accumulation",
+    "foreign_object_light",
+    "foreign_object_hard",
+    "cabinet_door_open",
+    "nonmotor_vehicle"
+   ],
+   "questions": [
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there an open flame or fire visible in the image?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there smoke that indicates a fire or an abnormal emission? Ignore normal process smoke or steam, such as from a slag pot or furnace.\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who has collapsed, fallen, or is lying on the ground?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person smoking (holding a lit cigarette) in the image?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing a hard hat (safety helmet)?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing protective gloves?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person who is not wearing a face mask?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a person using a mobile phone?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there pooled or standing water on the floor or ground?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there accumulated oil or an oil stain on the floor or equipment?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Are there foreign objects such as plastic bags, plastic bottles, foam, or paper lying around?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Are there foreign objects such as pieces of wood or metal lying where they should not be?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there an electrical or equipment cabinet door left open?\nAnswer:",
+    "You are checking an image captured by an industrial inspection robot. Answer the question about this image with a single word: Yes or No.\nQuestion: Is there a non-motorized vehicle (such as a bicycle or tricycle) in a vehicle lane?\nAnswer:"
+   ],
+   "ell_yes": [
+    -24.0,
+    -26.0,
+    -25.5,
+    -22.0,
+    0.0,
+    0.0,
+    -0.0,
+    -21.5,
+    -24.25,
+    -24.0,
+    -18.5,
+    -22.25,
+    -17.75,
+    -22.0
+   ],
+   "ell_no": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -23.625,
+    -19.25,
+    -16.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "z = ell_yes - ell_no": [
+    -24.0,
+    -26.0,
+    -25.5,
+    -22.0,
+    23.625,
+    19.25,
+    16.5,
+    -21.5,
+    -24.25,
+    -24.0,
+    -18.5,
+    -22.25,
+    -17.75,
+    -22.0
+   ],
+   "z_fanout_style (case variants pooled, top-20 floor, as the fan-out computes it)": [
+    -24.0,
+    -26.0,
+    -25.5,
+    -22.0,
+    23.625,
+    19.25,
+    16.5,
+    -21.5,
+    -24.25,
+    -24.0,
+    -18.5,
+    -22.25,
+    -17.75,
+    -22.0
+   ],
+   "z_fanout (vLLM, as used in all results)": [
+    -24.0,
+    -26.25,
+    -25.0,
+    -22.0,
+    22.5,
+    18.5,
+    16.75,
+    -21.0,
+    -22.75,
+    -23.25,
+    -19.25,
+    -22.75,
+    -17.75,
+    -23.0
+   ],
+   "top3_first_tokens": [
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -24.0
+     ],
+     [
+      "NO",
+      -27.25
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -26.0
+     ],
+     [
+      " No",
+      -28.0
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -25.5
+     ],
+     [
+      " No",
+      -28.0
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -22.0
+     ],
+     [
+      "NO",
+      -26.25
+     ]
+    ],
+    [
+     [
+      "Yes",
+      0.0
+     ],
+     [
+      "yes",
+      -20.5
+     ],
+     [
+      " Yes",
+      -21.75
+     ]
+    ],
+    [
+     [
+      "Yes",
+      0.0
+     ],
+     [
+      "No",
+      -19.25
+     ],
+     [
+      "yes",
+      -19.75
+     ]
+    ],
+    [
+     [
+      "Yes",
+      -0.0
+     ],
+     [
+      "No",
+      -16.5
+     ],
+     [
+      "yes",
+      -18.875
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -21.5
+     ],
+     [
+      "no",
+      -27.0
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -24.25
+     ],
+     [
+      "no",
+      -28.75
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -24.0
+     ],
+     [
+      "no",
+      -27.75
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -18.5
+     ],
+     [
+      "no",
+      -25.5
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -22.25
+     ],
+     [
+      "no",
+      -27.75
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -17.75
+     ],
+     [
+      "no",
+      -24.25
+     ]
+    ],
+    [
+     [
+      "No",
+      0.0
+     ],
+     [
+      "Yes",
+      -22.0
+     ],
+     [
+      "NO",
+      -26.75
+     ]
+    ]
+   ]
+  }
+ ]
+}
